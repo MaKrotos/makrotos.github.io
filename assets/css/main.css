@@ -1,0 +1,18 @@
+:root {
+    --color-dark: #000000;
+    --color-light: #ffffff;
+    --gradient-end: #ffcccc;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-size: cover;
+    background: linear-gradient(24deg, var(--color-light), var(--gradient-end));
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-light: var(--color-dark);
+    }
+}
