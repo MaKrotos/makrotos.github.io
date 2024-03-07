@@ -12,6 +12,7 @@
 
 
 :root {
+    background: #000000;
     --color-dark: #000000;
     --color-light: #ffffff;
     --gradient-end: #ffcccc;
@@ -24,6 +25,11 @@ html {
     overflow: auto;
     transition: all 2s ease;
 }
+div.main {
+ 
+}
+
+
 
 body {
     font-size: 40px;
@@ -33,6 +39,9 @@ body {
     background-size: cover;
     font-family: 'MyFont-Regular';
 }
+
+
+
 @keyframes fadeIn {
     0% {opacity: 0;}
     100% {opacity: 1;}

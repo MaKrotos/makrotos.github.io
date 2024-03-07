@@ -3,14 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function createImage(emoteName) {
         const img = document.createElement('img');
 
-        img.style.opacity = 0;
-        img.style.transition = 'opacity 0.5s';
+  
         img.setAttribute('src', `./emotes/${emoteName}.gif`);
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-                img.style.opacity = 1;
-            });
-        });
+       
         return img;
     }
 
@@ -61,3 +56,14 @@ function insertEmote() {
 }
 
 document.addEventListener('DOMContentLoaded', insertEmote);
+
+function createEmote()
+{
+    const emote = document.createElement('p');
+    emote.setAttribute('name', `(${i})`);
+    emote.innerHTML = "КУКУ";
+    document.body.appendChild(emote);
+    i++;
+
+}
+;
