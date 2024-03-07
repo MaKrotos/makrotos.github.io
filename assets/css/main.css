@@ -38,7 +38,7 @@ body {
     height: 100vh;
     margin: 0;
     background-size: cover;
-    background: linear-gradient(24deg, var(--color-light), var(--gradient-end));
+ 
     font-family: 'MyFont-Regular';
 }
 
@@ -47,6 +47,15 @@ body {
     --color-dark: #000000;
     --color-light: #ffffff;
     --gradient-end: #ffcccc;
+    background: linear-gradient(24deg, var(--color-light), var(--gradient-end));
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-light: var(--color-dark);
+    }
 }
 
 
@@ -66,12 +75,4 @@ emote img {
 
 .bigP {
     font-size: 250px;
-}
-
-
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-light: var(--color-dark);
-    }
 }

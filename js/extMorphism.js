@@ -1,4 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Создаем функцию для создания изображения
+    function createImage(emoteName) {
+        const img = document.createElement('img');
+
+        img.style.opacity = 0;
+        img.style.transition = 'opacity 0.5s';
+        img.setAttribute('src', `./emotes/${emoteName}.gif`);
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                img.style.opacity = 1;
+            });
+        });
+        return img;
+    }
+
     // Создаем экземпляр наблюдателя с колбэком, обрабатывающим изменения
     const observer = new MutationObserver((mutationsList, observer) => {
         // Проверяем все изменения в DOM
@@ -8,10 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 mutation.addedNodes.forEach(node => {
                     if(node.nodeName.toLowerCase() === 'emote') {
                         const emoteName = node.getAttribute('name');
-                        const img = document.createElement('img');
-                        img.style.height = 10;
-                        img.style.height = 10;
-                        img.setAttribute('src', `./emotes/${emoteName}.gif`);
+                        const img = createImage(emoteName);
                         node.appendChild(img);
                     }
                 });
@@ -25,8 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Обрабатываем все существующие элементы 'emote'
     document.querySelectorAll('emote').forEach(emoteElement => {
         const emoteName = emoteElement.getAttribute('name');
-        const img = document.createElement('img');
-        img.setAttribute('src', `./emotes/${emoteName}.gif`);
+        const img = createImage(emoteName);
         emoteElement.appendChild(img);
     });
 });
