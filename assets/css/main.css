@@ -1,15 +1,74 @@
+@font-face {
+    font-family: 'MyFont-Bold';
+    src: url('.../fonts/AmaticSC-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MyFont-Regular';
+    src: url('../../fonts/AmaticSC-Regular.ttf') format('truetype');
+}
+
+/* Скрываем стандартную полосу прокрутки */
+html {
+    overflow: auto;
+}
+
+/* Создаем свою полосу прокрутки */
+html::-webkit-scrollbar {
+    width: 0px; /* Ширина полосы */
+}
+
+/* Фон полосы прокрутки */
+html::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Цвет фона */
+}
+
+/* Цвет ползунка прокрутки */
+html::-webkit-scrollbar-thumb {
+    background: #888; /* Цвет ползунка */
+}
+
+/* Цвет ползунка при наведении */
+html::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Цвет при наведении */
+}
+
+body {
+    font-size: 40px;
+    height: 100vh;
+    margin: 0;
+    background-size: cover;
+    background: linear-gradient(24deg, var(--color-light), var(--gradient-end));
+    font-family: 'MyFont-Regular';
+}
+
+
 :root {
     --color-dark: #000000;
     --color-light: #ffffff;
     --gradient-end: #ffcccc;
 }
 
-body {
-    height: 100vh;
-    margin: 0;
-    background-size: cover;
-    background: linear-gradient(24deg, var(--color-light), var(--gradient-end));
+
+
+emote {
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    overflow: hidden;
 }
+emote img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.bigP {
+    font-size: 250px;
+}
+
+
 
 @media (prefers-color-scheme: dark) {
     :root {
