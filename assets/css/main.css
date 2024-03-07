@@ -11,12 +11,39 @@
 }
 
 
+:root {
+    --color-dark: #000000;
+    --color-light: #ffffff;
+    --gradient-end: #ffcccc;
+   
+}
+
 /* Скрываем стандартную полосу прокрутки */
 html {
-    background: lab(22.16 0 -0.01);
+    background: var(--color-light);
     overflow: auto;
-    transition: all 5s ease;
+    transition: all 2s ease;
 }
+
+body {
+    font-size: 40px;
+    color: #f1f1f1;
+    height: 100vh;
+    margin: 0;
+    background-size: cover;
+    font-family: 'MyFont-Regular';
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+  * {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+  }
+
+
 
 /* Создаем свою полосу прокрутки */
 html::-webkit-scrollbar {
@@ -38,23 +65,8 @@ html::-webkit-scrollbar-thumb:hover {
     background: #555; /* Цвет при наведении */
 }
 
-body {
-    font-size: 40px;
-    color: #f1f1f1;
-    height: 100vh;
-    margin: 0;
-    background-size: cover;
- 
-    font-family: 'MyFont-Regular';
-}
 
 
-:root {
-    --color-dark: #000000;
-    --color-light: #ffffff;
-    --gradient-end: #ffcccc;
-   
-}
 
 
 
