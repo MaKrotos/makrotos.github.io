@@ -35,6 +35,56 @@ document.addEventListener('DOMContentLoaded', function() {
         const img = createImage(emoteName);
         emoteElement.appendChild(img);
     });
+
+
+
+
+
+// Создаем новый элемент div
+    var circleDiv = document.createElement('div');
+
+    // Применяем стили для создания круглого div с красным фоном
+    circleDiv.style.width = "100px";
+    circleDiv.style.height ="100px";
+    circleDiv.style.background = 'red';
+    circleDiv.style.borderRadius = '50%';
+    // Применяем стили Flexbox к mainCircle для выравнивания вложенных элементов по центру
+    mainCircle.style.display = 'grid';
+    mainCircle.style.justifyContent = 'center';
+    mainCircle.style.alignItems = 'center';
+
+    // Добавляем созданный div в элемент с id 'mainCircle'
+    document.getElementById('mainCircle').appendChild(circleDiv);
+
+    var circleDiv = document.createElement('div');
+
+    // Применяем стили для создания круглого div с красным фоном
+    circleDiv.style.width = "100px";
+    circleDiv.style.height ="100px";
+    circleDiv.style.background = 'red';
+    circleDiv.style.borderRadius = '50%';
+    document.getElementById('mainCircle').appendChild(circleDiv);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
 
 
