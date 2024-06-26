@@ -1,14 +1,17 @@
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // Создаем функцию для создания изображения
-    function createImage(emoteName) {
+    function createImage(emoteName, width, height) {
         const img = document.createElement('img');
-
-  
         img.setAttribute('src', `./emotes/${emoteName}.gif`);
-       
+    
+        img.style.width = width;
+        img.style.height = height;
+   
         return img;
     }
-
+    
     // Создаем экземпляр наблюдателя с колбэком, обрабатывающим изменения
     const observer = new MutationObserver((mutationsList, observer) => {
         // Проверяем все изменения в DOM
@@ -18,13 +21,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 mutation.addedNodes.forEach(node => {
                     if(node.nodeName.toLowerCase() === 'emote') {
                         const emoteName = node.getAttribute('name');
-                        const img = createImage(emoteName);
+                        const width = node.style.width;
+                        const height = node.style.height;
+                        const img = createImage(emoteName, width, height);
+                        
                         node.appendChild(img);
                     }
                 });
             }
         }
     });
+    
 
     // Начинаем наблюдение за конфигурацией и начальным DOM
     observer.observe(document.body, { childList: true, subtree: true });
@@ -32,54 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Обрабатываем все существующие элементы 'emote'
     document.querySelectorAll('emote').forEach(emoteElement => {
         const emoteName = emoteElement.getAttribute('name');
-        const img = createImage(emoteName);
+        const width = emoteElement.style.width;
+        const height = emoteElement.style.height;
+        const img = createImage(emoteName, width, height);
         emoteElement.appendChild(img);
     });
-
-
-
-
-
-// Создаем новый элемент div
-    var circleDiv = document.createElement('div');
-
-    // Применяем стили для создания круглого div с красным фоном
-    circleDiv.style.width = "100px";
-    circleDiv.style.height ="100px";
-    circleDiv.style.background = 'red';
-    circleDiv.style.borderRadius = '50%';
-    // Применяем стили Flexbox к mainCircle для выравнивания вложенных элементов по центру
-    mainCircle.style.display = 'grid';
-    mainCircle.style.justifyContent = 'center';
-    mainCircle.style.alignItems = 'center';
-
-    // Добавляем созданный div в элемент с id 'mainCircle'
-    document.getElementById('mainCircle').appendChild(circleDiv);
-
-    var circleDiv = document.createElement('div');
-
-    // Применяем стили для создания круглого div с красным фоном
-    circleDiv.style.width = "100px";
-    circleDiv.style.height ="100px";
-    circleDiv.style.background = 'red';
-    circleDiv.style.borderRadius = '50%';
-    document.getElementById('mainCircle').appendChild(circleDiv);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -95,7 +59,13 @@ function insertEmote() {
     img.onload = function() {
         const emote = document.createElement('emote');
         emote.setAttribute('name', `(${i})`);
-        document.body.appendChild(emote);
+        
+        // Выберите элемент div с классом 'content'
+        const contentDiv = document.querySelector('.content');
+        
+        // Добавьте emote в div
+        contentDiv.appendChild(emote);
+        
         i++;
         insertEmote();
     };
@@ -105,7 +75,8 @@ function insertEmote() {
     img.src = `./emotes/(${i}).gif`;
 }
 
-document.addEventListener('DOMContentLoaded', insertEmote);
+
+//document.addEventListener('DOMContentLoaded', insertEmote);
 
 function createEmote()
 {
