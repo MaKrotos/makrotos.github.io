@@ -37,11 +37,11 @@ body {
     transition: width 0.3s ease;
 }
 .menu:hover {
-    width: 200px;
+    width: 300px;
 }
 .menu:hover .menu-item{
     border-radius: 50px;
-    width: 150px;
+    width: 250px;
 }
 .itemHeader {
     display: flex;
@@ -74,7 +74,6 @@ body {
 .menu-item:hover {
     background: rgba(255,255,255,0.4);
     transform: scale(1.1);
-
 }
 .menu-item span {
     font-size: 24px;
@@ -105,11 +104,12 @@ body {
 
 
 .photo {
-    will-change: transform;
+
     border-radius: 5px;
-    transform: translateZ(0);
-    flex-grow: 1;
+
+    width: 50%;
     max-width: 500px;
+
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.39);
     margin: 10px;
     padding: 0;
@@ -199,6 +199,12 @@ h2 {
         justify-content: space-around;
         padding: 10px 0;
     }
+
+    .menu:hover .menu-item{
+    border-radius: 50px;
+    width: 50px;
+}
+
     .menu:hover {
         width: 100%;
     }
