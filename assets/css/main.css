@@ -1,4 +1,9 @@
-/* Это будет применяться ко всем элементам на странице */
+
+
+
+
+
+
 ::-webkit-scrollbar {
     border-radius: 15px;
     transition: all 0.3s ease;

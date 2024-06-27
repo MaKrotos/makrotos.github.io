@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 let i = 1;
 
 function insertEmote() {
-    document.body.style.opacity = "1";
+    
     const img = new Image();
     img.onload = function() {
         const emote = document.createElement('emote');
