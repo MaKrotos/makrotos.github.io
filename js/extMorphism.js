@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // Создаем функцию для создания изображения
-    function createImage(emoteName, width, height) {
+    function createImage(emoteName, width, height, borderradius) {
         const img = document.createElement('img');
         img.setAttribute('src', `./emotes/${emoteName}.gif`);
     
@@ -55,13 +55,15 @@ document.addEventListener('DOMContentLoaded', function() {
 let i = 1;
 
 function insertEmote() {
+    document.body.style.opacity = "1";
     const img = new Image();
     img.onload = function() {
         const emote = document.createElement('emote');
         emote.setAttribute('name', `(${i})`);
+        emote.style.width = "50px";
         
         // Выберите элемент div с классом 'content'
-        const contentDiv = document.querySelector('.content');
+        const contentDiv = document.querySelector('.foxes');
         
         // Добавьте emote в div
         contentDiv.appendChild(emote);
@@ -75,8 +77,9 @@ function insertEmote() {
     img.src = `./emotes/(${i}).gif`;
 }
 
+document.addEventListener('DOMContentLoaded', insertEmote);
 
-//document.addEventListener('DOMContentLoaded', insertEmote);
+document.addEventListener('DOMContentLoaded', insertEmote);
 
 function createEmote()
 {

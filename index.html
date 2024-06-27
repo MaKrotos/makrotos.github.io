@@ -39,50 +39,143 @@ window.onload = function() {
 <body>
     <script>
         var randomNumber = Math.floor(Math.random() * 118) + 1; // Генерируем случайное число от 1 до 118
-        document.body.style.background = "url('./backgrounds/ (" + randomNumber + ").png') no-repeat center center fixed";
+        document.body.style.background = "url('./backgrounds/(" + randomNumber + ").jpg') no-repeat center center fixed";
     </script>
     
 
     <div class="container">
         <nav class="menu">
-            <div class="menu-item" onclick="scrollToSection('about')"><span>👤</span></div>
-            <div class="menu-item" onclick="scrollToSection('education')"><span>🎓</span></div>
-            <div class="menu-item" onclick="scrollToSection('experience')"><span>💼</span></div>
-            <div class="menu-item" onclick="scrollToSection('skills')"><span>🛠️</span></div>
-            <div class="menu-item" onclick="scrollToSection('achievements')"><span>🏆</span></div>
-            <div class="menu-item" onclick="scrollToSection('fox-traits')"><span>🦊</span></div>
+            <div style="display: contents;">
+                <div class="menu-item" onclick="scrollToSection('about')">
+                    <div class="itemHeader">
+                        <emote style="width: 40px; height: 40px;" name="(3)">
+                    </div>
+                    <div style="overflow: visible; white-space: nowrap;">Обо мне</div>
+                </div>
+                <div class="menu-item" onclick="scrollToSection('vkm')">
+                    <div class="itemHeader">
+                        <span><img width="60" height="60" src="icons/vkm.png" alt="" style="padding-top: 10px;"></span>
+                    </div>
+                    <div style="overflow: visible; white-space: nowrap;">VK M</div>
+                </div>
+                <div class="menu-item" onclick="scrollToSection('education')">
+                    <div class="itemHeader">
+                        <emote style="width: 40px; height: 40px;" name="(135)">
+                    </div>
+                    <div style="overflow: visible; white-space: nowrap;">Образование</div>
+                </div>
+                <div class="menu-item" onclick="scrollToSection('experience')">
+                    <div class="itemHeader">
+                        <emote style="width: 40px; height: 40px;" name="(12)">
+                    </div>
+                    <div style="overflow: visible; white-space: nowrap;">Опыт работы</div>
+                </div>
+                <div class="menu-item" onclick="scrollToSection('skills')">
+                    <div class="itemHeader">
+                        <emote style="width: 40px; height: 40px;" name="(61)">
+                    </div>
+                    <div style="overflow: visible; white-space: nowrap;">Навыки</div>
+                </div>
+                <div class="menu-item" onclick="scrollToSection('achievements')">
+                    <div class="itemHeader">
+                        <span>🏆</span>
+                    </div>
+                    <div style="overflow: visible; white-space: nowrap;">Достижения</div>
+                </div>
+                <div class="menu-item" onclick="scrollToSection('fox-traits')">
+                    <div class="itemHeader">
+                        <emote style="width: 40px; height: 40px;" name="(199)">
+                    </div>
+                    <div style="overflow: visible; white-space: nowrap;">Мои черты</div>
+                </div>
+            </div>
         </nav>
+        
         <div class="content">
-            <h1><emote style="width: 60px; height: 60px;" name="hello"></emote> MaKrotos 📄</h1>
+            <div  class="section">
+                <h1><emote style="width: 60px; height: 60px;" name="hello"></emote> MaKrotos 📄</h1>
+        </div>
+      
             
             <div id="about" class="section">
-                <h2><span class="emoji">👤</span>Обо мне</h2>
-                <p>Привет! Я МаКротос, креативный разработчик с лисьим подходом к решению задач. Я привношу творчество, адаптивность и дух дикой природы в каждый проект. 🦊💻</p>
+                <h2><span class="emoji"></span>👤 Обо мне</h2>
+                <p>Привет! Я разработчик .NET C#, PHP, Android(Java) 🦊💻</p>
             </div>
+            
+            <div id="vkm" class="section">
+            
+                <h2 style="
+                display: flex;
+                align-items: center;
+            ">     <img width="50" height="50" src="icons/vkm.png" alt="">VK M</h2>               
+            
+            
+            
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <div style="display: flex;align-items: flex-start;align-content: stretch;flex-wrap: nowrap;flex-direction: row;justify-content: center;">
+                    <div style="display: flex;flex-direction: column;justify-content: center;">
+                        <div >
+                          <p>Music M (VK M) - Pet-проект. Сейчас в процессе разработчки.</p>
+                          <p>Основан на WinUI3, на языке C#.</p>
+                          <p>Используется VKNet API</p>
+                          <br> <br>
+                          <a href="https://github.com/MaKrotos/Music-M/tree/master">(Подробнее здесь)</a>
+                        </div>
+                        <div style="display: flex;flex-wrap: wrap;justify-content: center;align-content: flex-start;align-items: flex-start;">
+                            <img class="section photo" src="https://github.com/MaKrotos/Music-M/assets/43302537/981f28a3-4922-49ce-b616-d23ed499f9d8" alt="Изображение">
+                            <img class="section photo" src="https://github.com/MaKrotos/Music-M/assets/43302537/e0ed9b01-c133-4f02-9d75-5339e5db8d61" alt="Изображение">
+                            <img class="section photo" src="https://github.com/MaKrotos/Music-M/assets/43302537/e1b1d021-64e1-4fce-8657-a3ef9a3b8627" alt="Изображение">
+                            <img class="section photo" src="https://github.com/MaKrotos/Music-M/assets/43302537/520340ae-47ae-4576-b9dd-12a6afba7b25" alt="Изображение">
+                            <img class="section photo" src="https://github.com/MaKrotos/Music-M/assets/43302537/740be7e5-2666-4170-880a-3f029d7fede2" alt="Изображение">
+                            <img class="section photo" src="https://github.com/MaKrotos/Music-M/assets/43302537/3de988a3-07a1-4493-8497-53acf6f19d8d" alt="Изображение">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+            </div>
+
             
             <div id="education" class="section">
                 <h2><span class="emoji">🎓</span>Образование</h2>
                 <div class="item">
-                    <h3>🏫 Лисий Технологический Институт</h3>
-                    <p>🎓 Магистр компьютерных наук и цифровых инноваций</p>
-                    <p>📅 2015 - 2019</p>
+                    <h3>🏫 Владимирский
+                        политехнический колледж                    </h3>
+                    <p>🎓 Программирование в компьютерных системах</p>
+                    <p>📅 2020 год выпуска</p>
                 </div>
             </div>
             
             <div id="experience" class="section">
                 <h2><span class="emoji">💼</span>Опыт работы</h2>
                 <div class="item">
-                    <h3>🦊 ТехНора Солюшенс</h3>
-                    <p>👨‍💻 Ведущий архитектор программного обеспечения</p>
-                    <p>📅 2019 - настоящее время</p>
-                    <p>🔧 Разработка инновационных решений и руководство agile-командами разработчиков</p>
+                    <h3>🦊 Интернет магазин Здоровеево</h3>
+                    <p>👨‍💻 Ведущий программист</p>
+                    <p>📅 2020 - настоящее время</p>
+                    <p>🔧 Сопровождение и доработка конфигураций CRM Bitrix</p>
+                    <p>🔧 Разработал систему печати этикеток для
+                        заказов, интегрированную с
+                        этикеточными принтерами и штрих-кодам, которая автоматически
+                        учитывает информацию о товаре,
+                        сборщике, месте и времени сборки.
+                        </p>
+                        <p>🔧 Разработка фирменных android и IOS приложений.(JAVA, SWIFT) </p> 
+                        <p>🔧 Разработка и защита базы данных (MSQL) </p> 
+                        <br><br>
+                        
+
+
+                        <img class="marketplaces" src="icons/ozon.png">
+                        <img class="marketplaces" src="icons/sber.png">
+                        <img class="marketplaces" src="icons/wb.png">
+                        <img class="marketplaces" src="icons/yandex.png">
+                        <img class="marketplaces" src="icons/fivepost.jpg">
+                        <p>🔧  ↑ Написание кода для интеграции маркетплейсов</p> 
+                        <br>
+
                 </div>
-                <div class="item">
-                    <h3>🐾 ДикоБайт Студиос</h3>
-                    <p>🎨 Старший UI/UX дизайнер и разработчик</p>
-                    <p>📅 2017 - 2019</p>
-                    <p>🖌️ Проектирование и реализация интуитивных пользовательских интерфейсов, вдохновленных природой</p>
-                </div>
+             
+          
             </div>
             
             <div id="skills" class="section">
@@ -98,17 +191,19 @@ window.onload = function() {
             </div>
             
             <div id="fox-traits" class="section">
-                <h2><span class="emoji">🦊</span>Мои лисьи черты</h2>
+                <h2><span class="emoji">🦊</span>Мои черты</h2>
                 <p>🧠 Быстро учусь и адаптируюсь к новым задачам</p>
-                <p>🔍 Острый глаз на детали и оптимизацию систем</p>
-                <p>🤝 Командный игрок с лидерскими навыками</p>
-                <p>🌙 Процветаю в динамичной среде, всегда готов к новым вызовам</p>
-                <p>🦊 Привношу игривый, но профессиональный подход к серьезной разработке</p>
+                <p>🔍 Упорно ищу решение задач, которые мне не под силу</p>
+                <p>🌙 Люблю много эксперементировать с кодом для нахождение наиболее лучшего решения</p>
             </div>
             
             <a href="https://t.me/MaKrotos" class="telegram-button">
                 <span class="emoji">📱</span>Связаться со мной в Telegram
             </a>
+
+            <div id="foxes" class="section foxes">
+              
+            </div>
         </div>
     </div>
     <script>

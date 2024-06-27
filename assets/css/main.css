@@ -1,6 +1,6 @@
 body {
     opacity: 0;
-    transition: opacity 0.9s ease;
+    transition: opacity 0.5s ease;
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
@@ -39,21 +39,42 @@ body {
 .menu:hover {
     width: 200px;
 }
-.menu-item {
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.37);
-    border-radius: 50%;
+.menu:hover .menu-item{
+    border-radius: 50px;
+    width: 150px;
+}
+.itemHeader {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 60px;
+}
+
+
+
+.menu-item {
+    overflow: hidden;
+    margin-left: 5px;
+    margin-right: 5px;
+    min-width: 60px;
+    min-height: 60px;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.37);
+    border-radius: 
+    50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     margin-bottom: 20px;
     cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
 }
 .menu-item:hover {
     background: rgba(255,255,255,0.4);
     transform: scale(1.1);
+
 }
 .menu-item span {
     font-size: 24px;
@@ -81,6 +102,41 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 6px 8px rgba(0,0,0,0.15);
 }
+
+
+.photo {
+    will-change: transform;
+    border-radius: 5px;
+    transform: translateZ(0);
+    flex-grow: 1;
+    max-width: 500px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.39);
+    margin: 10px;
+    padding: 0;
+}
+
+.photo:hover {
+    
+    transform: null;
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+.marketplaces
+{  background: rgba(255, 255, 255, 0.562);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 0px;
+
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    width: 50px;
+    height: 50px;
+}
+.marketplaces:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
 h1 {
     color: #4a76a8;
     text-align: center;
@@ -111,7 +167,8 @@ h2 {
     text-decoration: none;
     border-radius: 25px;
     display: inline-block;
-    margin-top: 20px;
+
+    margin-bottom: 20px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
@@ -125,6 +182,7 @@ h2 {
     margin-right: 5px;
 }
 @media (max-width: 768px) {
+    
     .menu:hover + .content {
         padding-left: 20px; /* Добавьте это свойство */
     }
@@ -132,7 +190,10 @@ h2 {
         flex-direction: column;
     }
     .menu {
-        height: 50px;
+        overflow-y: hidden;
+        overflow-x: auto;
+        white-space: nowrap;
+        height: 80px;
         width: 100%;
         flex-direction: row;
         justify-content: space-around;
@@ -143,11 +204,12 @@ h2 {
     }
     .menu-item {
         margin-bottom: 0;
+        
     }
     .content {
         padding-top: 80px;
         padding-left: 20px;
-padding-bottom: 20px;
-padding-right: 20px;
+        padding-bottom: 20px;
+        padding-right: 20px;
     }
 }
