@@ -215,6 +215,11 @@ h2 {
 }
 @media (max-width: 768px) {
     
+    body
+    {
+        padding-top: 50px;
+    }
+
     .menu:hover + .content {
         padding-left: 20px; /* Добавьте это свойство */
     }
