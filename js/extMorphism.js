@@ -77,9 +77,14 @@ function insertEmote() {
     img.src = `./emotes/(${i}).gif`;
 }
 
-document.addEventListener('DOMContentLoaded', insertEmote);
+//document.addEventListener('DOMContentLoaded', insertEmote);
 
-document.addEventListener('DOMContentLoaded', insertEmote);
+//document.addEventListener('DOMContentLoaded', insertEmote);
+function makeFoxes()
+{
+    console.log("qq");
+    insertEmote();
+}
 
 function createEmote()
 {
