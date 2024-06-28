@@ -338,6 +338,32 @@ h2 {
     font-size: 1.2em;
     margin-right: 5px;
 }
+
+.skill{
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 10px rgba(0 0 0 / 0.27);
+    background-color: #FFFFFF48;
+    color: black;
+    padding: 8px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-block;
+}
+.skill:hover{
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 5px rgba(0 0 0 / 0.27);
+    background-color: #FFFFFF48;
+    color: black;
+    padding: 8px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-block;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
 @media (max-width: 768px) {
     
     body
@@ -388,4 +414,6 @@ h2 {
         margin: 10px;
         padding: 0;
     }
+
+  
 }
