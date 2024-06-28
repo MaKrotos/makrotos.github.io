@@ -223,7 +223,7 @@ body {
     transition: all 0.3s ease;
     transform: translateX(-50%);
     text-align: center;
-    max-width: 80%;
+    max-width: 95%;
     background: rgba(255, 255, 255, 0.562);
     padding: 20px;
     border-radius: 10px;
