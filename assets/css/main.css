@@ -14,7 +14,7 @@
     backdrop-filter: blur(10px);
     justify-content: space-around;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    /* Добавьте следующую строку */
+
     height: auto;
     aspect-ratio: 1 / 1;
 }
@@ -112,11 +112,12 @@ body {
 }
 
 .menu:hover + .content {
-    padding-left: 150px; /* Добавьте это свойство */
+    padding-left: 150px; 
 }
 
 .blockLoading
 {
+    z-index: 10000;
      transition: all 0.5s ease;
     display: flex;
     align-items: center;
@@ -131,7 +132,7 @@ body {
     display: flex;
     opacity: 0;
     height: 100%;
-    position: absolute; /* Добавлено */
+    position: absolute; 
 }
 .menu {
     overflow-y: auto;
@@ -225,7 +226,7 @@ body {
     text-align: center;
     max-width: 95%;
     background: rgba(255, 255, 255, 0.562);
-    padding: 20px;
+    padding: 5px;
     border-radius: 10px;
     font-size: 18px;
     line-height: 1.6;
