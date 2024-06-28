@@ -341,7 +341,7 @@ h2 {
 
 .skill{
     backdrop-filter: blur(10px);
-    box-shadow: 0 8px 10px rgba(0 0 0 / 0.27);
+    box-shadow: 0 4px 4px rgba(0 0 0 / 0.1);
     background-color: #FFFFFF48;
     color: black;
     padding: 8px;
@@ -353,7 +353,8 @@ h2 {
 }
 .skill:hover{
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 5px rgba(0 0 0 / 0.27);
+    box-shadow: 0 4px 4px rgba(0 0 0 / 0.1);
+
     background-color: #FFFFFF48;
     color: black;
     padding: 8px;
