@@ -317,14 +317,13 @@ h2 {
     margin: 5px 0;
 }
 .telegram-button {
-    background-color: #0088cc67;
+    background-color: #002637a3;
     color: white;
     padding: 12px 24px;
     backdrop-filter: blur(10px);
     text-decoration: none;
     border-radius: 25px;
     display: inline-block;
-
     margin-bottom: 20px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
