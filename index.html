@@ -207,6 +207,21 @@ const loadingText = document.querySelector('.loading-text');
                     </div>
                     <div style="overflow: visible; white-space: nowrap;">Обо мне</div>
                 </div>
+
+                <div class="menu-item" onclick="scrollToSection('skills')">
+                    <div class="itemHeader">
+                        <emote style="width: 40px; height: 40px;" name="(61)">
+                    </div>
+                    <div style="overflow: visible; white-space: nowrap;">Навыки</div>
+                </div>
+
+                <div class="menu-item" onclick="scrollToSection('experience')">
+                    <div class="itemHeader">
+                        <emote style="width: 40px; height: 40px;" name="(12)">
+                    </div>
+                    <div style="overflow: visible; white-space: nowrap;">Опыт работы</div>
+                </div>
+            
                 <div class="menu-item" onclick="scrollToSection('vkm')">
                     <div class="itemHeader">
                         <span><img width="60" height="60" src="icons/vkm.png" alt="" style="padding-top: 10px;"></span>
@@ -219,21 +234,8 @@ const loadingText = document.querySelector('.loading-text');
                     </div>
                     <div style="overflow: visible; white-space: nowrap;">Telegram API</div>
                 </div>
-              
-                <div class="menu-item" onclick="scrollToSection('experience')">
-                    <div class="itemHeader">
-                        <emote style="width: 40px; height: 40px;" name="(12)">
-                    </div>
-                    <div style="overflow: visible; white-space: nowrap;">Опыт работы</div>
-                </div>
-
-
-                <div class="menu-item" onclick="scrollToSection('skills')">
-                    <div class="itemHeader">
-                        <emote style="width: 40px; height: 40px;" name="(61)">
-                    </div>
-                    <div style="overflow: visible; white-space: nowrap;">Навыки</div>
-                </div>
+            
+            
 
                 <div class="menu-item" onclick="scrollToSection('education')">
                     <div class="itemHeader">
@@ -242,8 +244,8 @@ const loadingText = document.querySelector('.loading-text');
                     <div style="overflow: visible; white-space: nowrap;">Образование</div>
                 </div>
                 
-              
-               
+            
+            
                 <div class="menu-item" onclick="scrollToSection('fox-traits')">
                     <div class="itemHeader">
                         <emote style="width: 40px; height: 40px;" name="(199)">
@@ -259,19 +261,102 @@ const loadingText = document.querySelector('.loading-text');
         </div>
       
             
-        <div id="about" class="section">
-            <h2 style="
-            display: flex;
-            align-items: center;
-        "> 
+            <div id="about" class="section">
+                <h2 style="
+                display: flex;
+                align-items: center;
+            "> 
                 <emote style="width: 40px; height: 40px;" name="(3)"></emote><p style="padding-left: 10px; margin-block-end: 0;
                 "> Обо мне</p></h2>     
                 <p>Привет! Я разработчик .NET C#, PHP, Android(Java) 🦊💻</p>
+                <p>Мне 24 года. Верчусь в сфере IT еще со школьных лет. </p>
+                <p>Живу во Владимирской обл. Готов к переезду.</p>
                 <a href="https://t.me/MaKrotos" class="telegram-button" style="width: fit-content;display: flex;align-items: center;flex-direction: row;flex-wrap: nowrap;align-content: space-between;justify-content: flex-start;">
                     <img style="margin-right: 10px;" width="30" height="30" src="icons/tgicon.png">Связаться со мной в Telegram
                 </a>
             </div>
             
+            <div id="skills" class="section">
+                <h2 style="
+                display: flex;
+                align-items: center;
+            ">     
+            <emote style="width: 40px; height: 40px;" name="(61)"></emote><p style="padding-left: 10px; margin-block-end: 0;"> Навыки</p></h2>
+            <span class="skill" >💻 .NET C#</span> 
+            <span class="skill" >🐘 PHP</span> 
+            <span class="skill" >🔁 Rest API / SOAP</span> 
+            <span class="skill" >🎨 CSS, SCSS,  HTML</span> 
+            <span class="skill" >🟨 JavaScript</span> 
+            <span class="skill" >🔷 Vue</span> 
+            <span class="skill" >🔍 jQuery</span> 
+            <span class="skill" >🐧Linux CentOS/Ubuntu/Debian CMD</span>  
+            <span class="skill" >🌐 Full-Stack разработка</span> 
+            <span class="skill" >📊 SQL, MySQL, PostgreSQL, ORM, MariaDB</span> 
+            <span class="skill" >💻 Android(Java)</span> 
+
+            <span class="skill" >📝 Swagger</span>
+            <span class="skill" >🌐 Apache</span> 
+            <span class="skill" >🏢 Bitrix</span> 
+            <span class="skill" >🔀 Git</span> 
+            <span class="skill" >➕ SugarORM</span> 
+            <span class="skill" >➕ VK API</span> 
+            <span class="skill" >➕ Telegram API</span> 
+            <span class="skill" >➕ Picasso</span> 
+            <span class="skill" >➕ WinUI3</span> 
+            <span class="skill" >➕ sqlite-net-pcl</span> 
+            <span class="skill" >🤖 API MarketPlace и... разберёмся, прочитаем документацию</span> 
+
+
+            </div>
+
+            <div id="experience" class="section">
+                <h2 style="
+                display: flex;
+                align-items: center;
+            "> 
+                <emote style="width: 40px; height: 40px;" name="(12)"></emote><p style="padding-left: 10px; margin-block-end: 0;
+                "> Опыт работы</p></h2>     
+                <div class="item">
+                    <h3>🦊 Интернет магазин Здоровеево</h3>
+                    <p>👨‍💻 Ведущий программист</p>
+                    <p>📅 2020 - настоящее время</p>
+                    <p>🔧 Сопровождение и доработка конфигураций CRM Bitrix</p>
+                    
+                        <p>🔧 Разработка фирменных android и IOS приложений.(JAVA, SWIFT) </p> 
+                        <p>🔧 Разработка и защита базы данных (MSQL) </p> 
+                        <br><br>
+                        
+
+
+                        <img class="marketplaces" src="icons/ozon.png">
+                        <img class="marketplaces" src="icons/sber.png">
+                        <img class="marketplaces" src="icons/wb.png">
+                        <img class="marketplaces" src="icons/yandex.png">
+                        <img class="marketplaces" src="icons/fivepost.jpg">
+                        <p>🔧 (PHP)<strong>Интеграция Маркетплейсов</strong>: Разработал код для эффективной интеграции различных маркетплейсов.</p>
+                        <p><strong>(OZON, WB, YandexMarket, СберМегаМаркет, 5Post)</strong> да, 5Post не маркетплейс</p>
+
+
+                        <p>🔧 (PHP)<strong>Автоматизация через API</strong>: Использовал открытые API для автоматизации процессов, включая получение заказов, обновление базы данных, управление остатками, ценами и описаниями товаров.</p>
+                        
+                        <p>🔧 (PHP)<strong>Система Печати Этикеток</strong>: Создал систему, которая автоматизирует печать этикеток для заказов, работает с принтерами и штрих-кодами, отслеживает информацию о товаре и его сборщике. Эта система может использовать этикетки из интернет-магазина или создавать собственные, что упрощает обработку заказов.</p>
+                       
+                        <p>🔧 (PHP, HTML, JS, CSS)<strong>Аналитика</strong>: Создал множество различных автоматических таблиц для аналитики данных в базе данных и о происходящем на маркетплейсах.</p>
+
+                        <p>🔧 (Android[Java]/iOS)<strong>Мобильное приложение</strong>: Создал фирменное мобильное приложение для интеграции с сайтом заказчика.</p>
+
+                            </p>
+                        <br>
+
+                </div>
+             
+          
+            </div>
+            
+            
+
+            
+
             <div id="vkm" class="section">
             
                 <h2 style="
@@ -347,72 +432,7 @@ const loadingText = document.querySelector('.loading-text');
                   </div>
                 </div>
 
-            <div id="experience" class="section">
-                <h2 style="
-                display: flex;
-                align-items: center;
-            "> 
-                <emote style="width: 40px; height: 40px;" name="(12)"></emote><p style="padding-left: 10px; margin-block-end: 0;
-                "> Опыт работы</p></h2>     
-                <div class="item">
-                    <h3>🦊 Интернет магазин Здоровеево</h3>
-                    <p>👨‍💻 Ведущий программист</p>
-                    <p>📅 2020 - настоящее время</p>
-                    <p>🔧 Сопровождение и доработка конфигураций CRM Bitrix</p>
-                    
-                        <p>🔧 Разработка фирменных android и IOS приложений.(JAVA, SWIFT) </p> 
-                        <p>🔧 Разработка и защита базы данных (MSQL) </p> 
-                        <br><br>
-                        
 
-
-                        <img class="marketplaces" src="icons/ozon.png">
-                        <img class="marketplaces" src="icons/sber.png">
-                        <img class="marketplaces" src="icons/wb.png">
-                        <img class="marketplaces" src="icons/yandex.png">
-                        <img class="marketplaces" src="icons/fivepost.jpg">
-                        <p>🔧 (PHP)<strong>Интеграция Маркетплейсов</strong>: Разработал код для эффективной интеграции различных маркетплейсов.</p>
-
-                        <p>🔧 (PHP)<strong>Автоматизация через API</strong>: Использовал открытые API для автоматизации процессов, включая получение заказов, обновление базы данных, управление остатками, ценами и описаниями товаров.</p>
-                        
-                        <p>🔧 (PHP)<strong>Система Печати Этикеток</strong>: Создал систему, которая автоматизирует печать этикеток для заказов, работает с принтерами и штрих-кодами, отслеживает информацию о товаре и его сборщике. Эта система может использовать этикетки из интернет-магазина или создавать собственные, что упрощает обработку заказов.</p>
-                        
-                            </p>
-                        <br>
-
-                </div>
-             
-          
-            </div>
-            
-            
-
-            <div id="skills" class="section">
-                <h2 style="
-                display: flex;
-                align-items: center;
-            ">     
-            <emote style="width: 40px; height: 40px;" name="(61)"></emote><p style="padding-left: 10px; margin-block-end: 0;"> Навыки</p></h2>
-            <span class="skill" >💻 .NET C#</span> 
-            <span class="skill" >🐘 PHP</span> 
-            <span class="skill" >🎨 CSS, SCSS,  HTML</span> 
-            <span class="skill" >🟨 JavaScript</span> 
-            <span class="skill" >🔷 Vue</span> 
-            <span class="skill" >🔍 jQuery</span> 
-            <span class="skill" >🐧 Linux CMD</span> 
-            <span class="skill" >🔴 CentOS CMD</span> 
-            <span class="skill" >🔶 Ubuntu CMD</span> 
-            <span class="skill" >🔵 Debian CMD</span> 
-            <span class="skill" >🌐 Full-Stack разработка</span> 
-            <span class="skill" >📊 SQL, MySQL, PostgreSQL, ORM</span> 
-            <span class="skill" >📝 Swagger</span>
-            <span class="skill" >🌐 Apache</span> 
-            <span class="skill" >🏢 Bitrix</span> 
-            <span class="skill" >🔀 Git</span> 
-            <span class="skill" >🤖 API MarketPlace/Telegram и... разберёмся, прочитаем документацию</span> 
-
-
-            </div>
 
             <div id="education" class="section">
                 <h2 style="
@@ -444,7 +464,7 @@ const loadingText = document.querySelector('.loading-text');
                 <p>🔍 Упорно ищу решения задач, которые кажутся мне сложными.</p>
                 <p>🌙 Люблю много эксперементировать с кодом для нахождение наиболее лучшего решения</p>
                 <p>🎯 Сосредоточен на достижении целей и всегда стремлюсь к совершенству.</p>
-                <p> <emote style="margin-right: 10px; width: 25px; height: 25px;" name="(29)"></emote>Не успокоюсь, пока визуально фронт не станет конфеткой</p>
+                <p> <emote style="margin-right: 10px; width: 25px; height: 25px;" name="(29)"></emote>Не успокоюсь, пока визуально фронт не станет конфеткой. В общем не люблю из-за этого фронт.</p>
             </div>
 
             <div onclick="makeFoxes()" id="foxes" class="section foxes">
