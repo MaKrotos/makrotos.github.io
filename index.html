@@ -190,9 +190,9 @@ const loadingText = document.querySelector('.loading-text');
     }, 5000);
     }
 
-    intervalId = setInterval(createCodeDrop, 50); // Измените эту строку
+    intervalId = setInterval(createCodeDrop, 50);
 
-    // Добавьте эту функцию для остановки кода
+
     function stopCode() {
         clearInterval(intervalId);
     }
@@ -587,14 +587,13 @@ const loadingText = document.querySelector('.loading-text');
             behavior: 'smooth'
         });
 
-        // Создаем новое событие мыши
         var event = new MouseEvent('mouseover', {
             view: window,
             bubbles: true,
             cancelable: true
         });
 
-        // Отправляем событие элементу
+
         element.dispatchEvent(event);
     }
 
