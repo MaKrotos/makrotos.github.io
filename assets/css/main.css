@@ -81,6 +81,7 @@
 ::-webkit-scrollbar-track {
     border-radius: 15px 0px 15px 0px;
     transition: all 0.3s ease;
+    transition: all 0.3s ease;
     background: #f1f1f100; /* Цвет фона */
 }
 
@@ -88,12 +89,14 @@
 ::-webkit-scrollbar-thumb {
     border-radius: 15px 0px 15px 0px;
     transition: all 0.3s ease;
+    transition: all 0.3s ease;
     background: #4a76a8; /* Цвет ручки */
 }
 
 /* Цвет ручки при наведении */
 ::-webkit-scrollbar-thumb:hover {
     background: #4a76a8; /* Цвет ручки */
+    transition: all 0.3s ease;
 }
 
 
