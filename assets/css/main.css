@@ -70,7 +70,7 @@
 
 
 ::-webkit-scrollbar {
-    border-radius: 15px;
+    border-radius: 15px 0px 15px 0px;
     transition: all 0.3s ease;
     width: 15px; /* Ширина полосы прокрутки */
     background: #f1f1f100; /* Цвет фона */
@@ -79,14 +79,14 @@
 
 /* Фон полосы прокрутки */
 ::-webkit-scrollbar-track {
-    border-radius: 15px;
+    border-radius: 15px 0px 15px 0px;
     transition: all 0.3s ease;
     background: #f1f1f100; /* Цвет фона */
 }
 
 /* Ручка полосы прокрутки */
 ::-webkit-scrollbar-thumb {
-    border-radius: 15px;
+    border-radius: 15px 0px 15px 0px;
     transition: all 0.3s ease;
     background: #4a76a8; /* Цвет ручки */
 }
