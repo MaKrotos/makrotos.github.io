@@ -355,6 +355,7 @@ h2 {
     border-radius: 20px;
     font-size: 14px;
     display: inline-block;
+    transition: all 0.3s ease;
 }
 .skill:hover{
     backdrop-filter: blur(10px);
@@ -367,7 +368,7 @@ h2 {
     font-size: 14px;
     display: inline-block;
     transform: translateY(-2px);
-    transition: all 0.3s ease;
+   
 }
 
 @media (max-width: 768px) {
