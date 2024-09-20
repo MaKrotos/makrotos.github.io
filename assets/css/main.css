@@ -115,7 +115,7 @@ body {
 }
 
 .menu:hover + .content {
-    padding-left: 150px; 
+
 }
 
 .blockLoading
@@ -321,7 +321,22 @@ h2 {
 .item p {
     margin: 5px 0;
 }
-.telegram-button {
+
+.tg-bt
+{
+    background-color: #002637a3;
+}
+.zd-bt
+{
+    background-color: #40965bdb;
+}
+
+.vkm-bt 
+{
+    background-color: #e4a064;
+}
+
+a {
     background-color: #002637a3;
     color: white;
     padding: 12px 24px;
@@ -333,7 +348,7 @@ h2 {
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
-.telegram-button:hover {
+a:hover {
     background-color: #0088cc94;
     transform: translateY(-2px);
     box-shadow: 0 6px 8px rgba(0,0,0,0.15);
