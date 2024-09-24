@@ -259,6 +259,12 @@ body {
     box-shadow: 0 0.10rem 0.50rem #0050c4, inset 0 0 0 transparent;
 }
 
+.highlight {
+    box-shadow: 0 0.10rem 0.50rem #0066FF, inset 0 0 0 transparent;
+    transition: box-shadow 0.1s;
+}
+
+
 .fact-container {
     position: absolute;
     bottom: 40px;
