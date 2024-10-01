@@ -755,18 +755,7 @@
     <script>
 
 
-        function toggleHighlight(element) {
-            element.classList.add('highlight');
-            setTimeout(() => {
-                element.classList.remove('highlight');
-                setTimeout(() => {
-                    element.classList.add('highlight');
-                    setTimeout(() => {
-                        element.classList.remove('highlight');
-                    }, 250);
-                }, 250);
-            }, 250);
-        }
+   
 
         function scrollToSection(sectionId) {
             const container = document.querySelector('.content');
@@ -787,9 +776,7 @@
 
             element.dispatchEvent(event);
 
-            setTimeout(() => {
-                toggleHighlight(element);
-            }, 250);
+
         }
 
 
