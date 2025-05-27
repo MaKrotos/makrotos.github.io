@@ -1,0 +1,24 @@
+.skill,.skill:hover,a {
+    backdrop-filter: blur(10px);
+    display: inline-block
+}
+
+.skill,.skill:hover {
+    box-shadow: 0 4px 4px rgba(0 0 0/.1);
+    color: #000;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 14px
+}
+
+.skill {
+    cursor: pointer;
+    background-color: #ffffff48;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    transition: all .3s ease
+}
+
+.skill:hover {
+    transform: translateY(-2px)
+}

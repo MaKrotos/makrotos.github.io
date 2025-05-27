@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
+    <head>
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
         (function (m, e, t, r, i, k, a) {
             m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
             m[i].l = 1 * new Date();
@@ -18,13 +17,14 @@
             accurateTrackBounce: true,
             webvisor: true
         });
-    </script>
-    <noscript>
-        <div><img src="https://mc.yandex.ru/watch/96690510" style="position:absolute; left:-9999px;" alt="" /></div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
-
-    <script>
+        </script>
+        <noscript>
+            <div>
+                <img src="https://mc.yandex.ru/watch/96690510" style="position:absolute; left:-9999px;" alt="">
+            </div>
+        </noscript>
+        <!-- /Yandex.Metrika counter -->
+        <script>
         window.onload = function () {
             var container = document.querySelector('.container');
             container.style.opacity = "1";
@@ -35,54 +35,57 @@
                 stopCode();
             }
                 , 300)
-        }; 
-    </script>
-
-    <noscript>
-        <div><img src="https://mc.yandex.ruz/watch/96690510" style="position:absolute; left:-9999px;" alt="" /></div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
-    <!-- Yandex.Metrika counter -->
-
-    <noscript>
-        <div><img src="https://mc.yandex.ru/watch/96690510" style="position:absolute; left:-9999px;" alt="" /></div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MaKrotos DevS</title>
-    <link rel="stylesheet" href="assets/css/main.css?v=1.1">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script src="js/extMorphism.js?v=1.1"></script>
-</head>
-
-<body>
-    <img id="background-img">
-    <script>
+        };
+        </script>
+        <noscript>
+            <div>
+                <img src="https://mc.yandex.ruz/watch/96690510" style="position:absolute; left:-9999px;" alt="">
+            </div>
+        </noscript>
+        <!-- /Yandex.Metrika counter -->
+        <!-- Yandex.Metrika counter -->
+        <noscript>
+            <div>
+                <img src="https://mc.yandex.ru/watch/96690510" style="position:absolute; left:-9999px;" alt="">
+            </div>
+        </noscript>
+        <!-- /Yandex.Metrika counter -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MaKrotos DevS</title>
+        <link rel="stylesheet" href="assets/css/background.css">
+        <link rel="stylesheet" href="assets/css/menu.css">
+        <link rel="stylesheet" href="assets/css/skill.css">
+        <link rel="stylesheet" href="assets/css/exp.css">
+        <link rel="stylesheet" href="assets/css/gallery.css">
+        <link rel="stylesheet" href="assets/css/section.css">
+        <link rel="stylesheet" href="assets/css/loading.css">
+        <link rel="stylesheet" href="assets/css/main.css?v=1.2">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <script src="js/extMorphism.js?v=1.1"></script>
+    </head>
+    <body>
+        <img id="background-img">
+        <script>
         var randomNumber = Math.floor(Math.random() * 118) + 1; // Генерируем случайное число от 1 до 118
         var img = document.getElementById('background-img');
         img.src = './backgrounds/(' + randomNumber + ').jpg';
         img.onload = function () {
             img.style.opacity = 1; // Плавное появление изображения после полной загрузки
         };
-    </script>
-
-    <div class="blockLoading">
-        <div class="blur-overlay"></div>
-        <div class="code-rain"></div>
-        <div class="loading-container">
-            <div class="loading-circle"></div>
-            <div class="loading-circle"></div>
-            <div class="loading-circle"></div>
-            <div class="loading-text">Загрузка</div>
+        </script>
+        <div class="blockLoading">
+            <div class="blur-overlay"></div>
+            <div class="code-rain"></div>
+            <div class="loading-container">
+                <div class="loading-circle"></div>
+                <div class="loading-circle"></div>
+                <div class="loading-circle"></div>
+                <div class="loading-text"></div>
+            </div>
+            <div class="fact-container"></div>
         </div>
-
-
-
-
-        <div class="fact-container"></div>
-    </div>
-    <script>
+        <script>
 
         const loadingText = document.querySelector('.loading-text');
         const texts = ['Загрузка', 'Подождите', 'Почти готово', 'Обработка данных'];
@@ -175,15 +178,8 @@
 
         showFact();
         setInterval(showFact, 7000);
-
-
-
-
-    </script>
-
-
-
-    <script>
+        </script>
+        <script>
 
         const codeRain = document.querySelector('.code-rain');
         const codeCharacters = ['0', '1', '{', '}', '[', ']', '(', ')', '<', '>', '/', '*', '+', '-', '=', ';'];
@@ -209,686 +205,743 @@
         function stopCode() {
             clearInterval(intervalId);
         }
-    </script>
-
-    <div class="container">
-        <nav class="menu">
-            <div style="display: contents;">
-                <div class="menu-item" onclick="scrollToSection('about')">
-                    <div class="itemHeader">
-                        <emote style="width: 40px; height: 40px;" name="(3)">
-                    </div>
-                    <div style="overflow: visible; white-space: nowrap;">Обо мне</div>
-                </div>
-
-                <div class="menu-item" onclick="scrollToSection('skills')">
-                    <div class="itemHeader">
-                        <emote style="width: 40px; height: 40px;" name="(61)">
-                    </div>
-                    <div style="overflow: visible; white-space: nowrap;">Навыки</div>
-                </div>
-
-                <div class="menu-item" onclick="scrollToSection('want_to_study')">
-                    <div class="itemHeader">
-                        <emote style="width: 40px; height: 40px;" name="(24)">
-                    </div>
-                    <div style="overflow: visible; white-space: nowrap;">Хочу освоить</div>
-                </div>
-
-                <div class="menu-item" onclick="scrollToSection('experience')">
-                    <div class="itemHeader">
-                        <emote style="width: 40px; height: 40px;" name="(12)">
-                    </div>
-                    <div style="overflow: visible; white-space: nowrap;">Опыт работы</div>
-                </div>
-
-                <div class="menu-item" onclick="scrollToSection('vkm')">
-                    <div class="itemHeader">
-                        <span><img width="60" height="60" src="icons/vkm.png" alt="" style="padding-top: 10px;"></span>
-                    </div>
-                    <div style="overflow: visible; white-space: nowrap;">VK M</div>
-                </div>
-                <div class="menu-item" onclick="scrollToSection('tg')">
-                    <div class="itemHeader">
-                        <span><img width="60" height="60" src="icons/tg.png" alt="" style="padding-top: 5px;"></span>
-                    </div>
-                    <div style="overflow: visible; white-space: nowrap;">Telegram API</div>
-                </div>
-                <div class="menu-item" onclick="scrollToSection('android')">
-                    <div class="itemHeader">
-                        <span><img width="50" height="50" src="icons/android.png" alt=""
-                                style="padding-top: 5px;"></span>
-                    </div>
-                    <div style="overflow: visible; white-space: nowrap;">Android</div>
-                </div>
-
-                <div class="menu-item" onclick="scrollToSection('Laravel')">
-                    <div class="itemHeader">
-                        <span><img width="40" height="40" src="icons/Laravel.png" alt=""
-                                style="padding-left: 3px; padding-top: 10px;"></span>
-                    </div>
-                    <div style="overflow: visible; white-space: nowrap;">Laravel</div>
-                </div>
-
-                <div class="menu-item" onclick="scrollToSection('uwp')">
-                    <div class="itemHeader">
-                        <span><img width="40" height="40" src="icons/uwp.png" alt="" style="padding-top: 5px;"></span>
-                    </div>
-                    <div style="overflow: visible; white-space: nowrap;">UWP/Microsoft Store</div>
-                </div>
-
-                <div class="menu-item" onclick="scrollToSection('education')">
-                    <div class="itemHeader">
-                        <emote style="width: 40px; height: 40px;" name="(135)">
-                    </div>
-                    <div style="overflow: visible; white-space: nowrap;">Образование</div>
-                </div>
-
-
-                <div class="menu-item" onclick="scrollToSection('fox-traits')">
-                    <div class="itemHeader">
-                        <emote style="width: 40px; height: 40px;" name="(199)">
-                    </div>
-                    <div style="overflow: visible; white-space: nowrap;">Мои черты</div>
-                </div>
-            </div>
-        </nav>
-
-        <div class="content">
-            <div>
-                <h1 style="color: white;">
-                    <emote style="width: 60px; height: 60px;" name="hello"></emote> MaKrotos 📄
-                </h1>
-            </div>
-
-
-            <div id="about" class="section">
-                <h2 style="
+        </script>
+        <div class="container">
+            <nav class="menu">
+                <div style="display: contents;">
+                    <div class="menu-item" onclick="scrollToSection('about')">
+                        <div class="itemHeader">
+                            <emote style="width: 40px; height: 40px;" name="(3)">
+                            </div>
+                            <div style="overflow: visible; white-space: nowrap;">Обо мне</div>
+                        </div>
+                        <div class="menu-item" onclick="scrollToSection('skills')">
+                            <div class="itemHeader">
+                                <emote style="width: 40px; height: 40px;" name="(61)">
+                                </div>
+                                <div style="overflow: visible; white-space: nowrap;">Навыки</div>
+                            </div>
+                            <div class="menu-item" onclick="scrollToSection('want_to_study')">
+                                <div class="itemHeader">
+                                    <emote style="width: 40px; height: 40px;" name="(24)">
+                                    </div>
+                                    <div style="overflow: visible; white-space: nowrap;">Хочу освоить</div>
+                                </div>
+                                <div class="menu-item" onclick="scrollToSection('experience')">
+                                    <div class="itemHeader">
+                                        <emote style="width: 40px; height: 40px;" name="(12)">
+                                        </div>
+                                        <div style="overflow: visible; white-space: nowrap;">Опыт работы</div>
+                                    </div>
+                                    <div class="menu-item" onclick="scrollToSection('vkm')">
+                                        <div class="itemHeader">
+                                            <span>
+                                                <img
+                                                    width="60"
+                                                    height="60"
+                                                    src="icons/vkm.png"
+                                                    alt=""
+                                                    style="padding-top: 10px;"
+                                                >
+                                            </span>
+                                        </div>
+                                        <div style="overflow: visible; white-space: nowrap;">VK M</div>
+                                    </div>
+                                    <div class="menu-item" onclick="scrollToSection('tg')">
+                                        <div class="itemHeader">
+                                            <span>
+                                                <img
+                                                    width="60"
+                                                    height="60"
+                                                    src="icons/tg.png"
+                                                    alt=""
+                                                    style="padding-top: 5px;"
+                                                >
+                                            </span>
+                                        </div>
+                                        <div style="overflow: visible; white-space: nowrap;">Telegram API</div>
+                                    </div>
+                                    <div class="menu-item" onclick="scrollToSection('android')">
+                                        <div class="itemHeader">
+                                            <span>
+                                                <img
+                                                    width="50"
+                                                    height="50"
+                                                    src="icons/android.png"
+                                                    alt=""
+                                                    style="padding-top: 5px;"
+                                                >
+                                            </span>
+                                        </div>
+                                        <div style="overflow: visible; white-space: nowrap;">Android</div>
+                                    </div>
+                                    <div class="menu-item" onclick="scrollToSection('Laravel')">
+                                        <div class="itemHeader">
+                                            <span>
+                                                <img
+                                                    width="40"
+                                                    height="40"
+                                                    src="icons/Laravel.png"
+                                                    alt=""
+                                                    style="padding-left: 3px; padding-top: 10px;"
+                                                >
+                                            </span>
+                                        </div>
+                                        <div style="overflow: visible; white-space: nowrap;">Laravel</div>
+                                    </div>
+                                    <div class="menu-item" onclick="scrollToSection('uwp')">
+                                        <div class="itemHeader">
+                                            <span>
+                                                <img
+                                                    width="40"
+                                                    height="40"
+                                                    src="icons/uwp.png"
+                                                    alt=""
+                                                    style="padding-top: 5px;"
+                                                >
+                                            </span>
+                                        </div>
+                                        <div style="overflow: visible; white-space: nowrap;">UWP/Microsoft Store</div>
+                                    </div>
+                                    <div class="menu-item" onclick="scrollToSection('education')">
+                                        <div class="itemHeader">
+                                            <emote style="width: 40px; height: 40px;" name="(135)">
+                                            </div>
+                                            <div style="overflow: visible; white-space: nowrap;">Образование</div>
+                                        </div>
+                                        <div class="menu-item" onclick="scrollToSection('fox-traits')">
+                                            <div class="itemHeader">
+                                                <emote style="width: 40px; height: 40px;" name="(199)">
+                                                </div>
+                                                <div style="overflow: visible; white-space: nowrap;">Мои черты</div>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                    <div class="content">
+                                        <div>
+                                            <h1 style="color: white;">
+                                                <emote style="width: 60px; height: 60px;" name="hello"></emote>
+                                                MaKrotos 📄
+                                            </h1>
+                                        </div>
+                                        <div id="about" class="section">
+                                            <h2 style="
                 display: flex;
                 align-items: center;
             ">
-                    <emote style="width: 40px; height: 40px;" name="(3)"></emote>
-                    <p style="padding-left: 10px; margin-block-end: 0;
+                                                <emote style="width: 40px; height: 40px;" name="(3)"></emote>
+                                                <p style="padding-left: 10px; margin-block-end: 0;
                 "> Обо мне</p>
-                </h2>
-                <p>Привет! Я разработчик .NET C#, PHP, Android(Java) 🦊💻</p>
-
-                <p>Живу в Москве.</p>
-
-                <a target="_blank" href="https://github.com/MaKrotos/" class="github"
-                    style="width: fit-content;display: flex;align-items: center;flex-direction: row;flex-wrap: nowrap;align-content: space-between;justify-content: flex-start;">
-                    <img style="margin-right: 10px;" width="30" height="30" src="icons/github.png">Мой GitHub
-                </a>
-                <a target="_blank" href="https://t.me/MaKrotos" class="tg-bt"
-                    style="width: fit-content;display: flex;align-items: center;flex-direction: row;flex-wrap: nowrap;align-content: space-between;justify-content: flex-start;">
-                    <img style="margin-right: 10px;" width="30" height="30" src="icons/tgicon.png">Связаться со мной в
+                                            </h2>
+                                            <p>Привет! Я разработчик .NET C#, PHP, Android(Java) 🦊💻</p>
+                                            <p>Живу в Москве.</p>
+                                            <a
+                                                target="_blank"
+                                                href="https://github.com/MaKrotos/"
+                                                class="github"
+                                                style="width: fit-content;display: flex;align-items: center;flex-direction: row;flex-wrap: nowrap;align-content: space-between;justify-content: flex-start;"
+                                            >
+                                                <img
+                                                    style="margin-right: 10px;"
+                                                    width="30"
+                                                    height="30"
+                                                    src="icons/github.png"
+                                                >
+                                                Мой GitHub
+                                            </a>
+                                            <a
+                                                target="_blank"
+                                                href="https://t.me/MaKrotos"
+                                                class="tg-bt"
+                                                style="width: fit-content;display: flex;align-items: center;flex-direction: row;flex-wrap: nowrap;align-content: space-between;justify-content: flex-start;"
+                                            >
+                                                <img
+                                                    style="margin-right: 10px;"
+                                                    width="30"
+                                                    height="30"
+                                                    src="icons/tgicon.png"
+                                                >
+                                                Связаться со мной в
                     Telegram
-                </a>
-
-
-           
-            </div>
-
-            <div id="skills" class="section">
-                <h2 style="
+                                            </a>
+                                        </div>
+                                        <div id="skills" class="section">
+                                            <h2 style="
                 display: flex;
                 align-items: center;
             ">
-                    <emote style="width: 40px; height: 40px;" name="(61)"></emote>
-                    <p style="padding-left: 10px; margin-block-end: 0;"> Навыки</p>
-                </h2>
-
-                <div style="background: rgba(100, 181, 246, 0.15);" class="section-skill"><b>Web: </b>
-                    <span class="skill skilld">🐘 PHP</span>
-                    <span class="skill skilld">🗿 Legacy код</span>
-                    <span class="skill skilld">🛒 CRM VamShop</span>
-                    <span class="skill skilld">🔁 Rest API / SOAP</span>
-                    <span class="skill skilld">🎨 CSS, SCSS, HTML</span>
-                    <span class="skill skilld">🟨 JavaScript</span>
-                    <span class="skill skilld">🔍 jQuery</span>
-                    <span class="skill skilld">🌐 Full-Stack разработка</span>
-                    <span class="skill skilld">🎪 Laravel</span>
-                    <span class="skill skilld">📝 Swagger</span>
-                    <span class="skill skilld">🌐 Apache</span>
-                    <span class="skill skilld">🏢 Bitrix</span>
-                </div>
-
-                <div style="background-color: rgba(103, 80, 164, 0.15);" class="section-skill"> <b>Desctop:</b>
-                    <span class="skill skilld">💻 .NET C#</span>
-                    <span class="skill skilld">➕ WinUI3</span>
-                    <span class="skill skilld">➕ sqlite-net-pcl</span>
-                </div>
-
-                <div style="background-color: rgba(76, 175, 80, 0.15);" class="section-skill"><b>Android:</b>
-                    <span class="skill skilld">💻 .NET C#</span>
-                    <span class="skill skilld">💻 Android(Java)</span>
-                    <span class="skill skilld">💻 Xamarin</span>
-                    <span class="skill skilld">➕ SugarORM</span>
-                </div>
-
-                <div style="background-color: rgba(255, 152, 0, 0.15);" class="section-skill"><b>API:</b>
-                    <span class="skill skilld">➕ VK API</span>
-                    <span class="skill skilld">➕ Telegram API</span>
-                    <span class="skill skilld">➕ Picasso</span>
-                </div>
-
-                <div style="background-color: rgba(96, 125, 139, 0.15);" class="section-skill"><b>Server:</b>
-                    <span class="skill skilld">📊 SQL, MySQL, PostgreSQL, ORM, MariaDB</span>
-                    <span class="skill skilld">🐧Linux CentOS/Ubuntu/Debian CMD</span>
-                </div>
-    
-
-                <div style="background-color: rgba(120, 144, 156, 0.1);" class="section-skill"><b>More:</b>
-                    <span class="skill skilld">🔀 Git</span>
-                    <span class="skill skilld">➕ ЮзерСкриптинг</span>
-                    <span class="skill skilld">➕ Плагины для хрома</span>
-                    <span class="skill skilld">⚠ Если я чего-то не умею - значит придётся научиться.</span>
-                    <span class="skill skilld">🤖 API MarketPlace и... разберёмся, прочитаем документацию</span>
-                </div>
-    
- 
-
-            </div>
-
-            <div id="want_to_study" class="section">
-                <h2 style="
+                                                <emote style="width: 40px; height: 40px;" name="(61)"></emote>
+                                                <p style="padding-left: 10px; margin-block-end: 0;"> Навыки</p>
+                                            </h2>
+                                            <div style="background: rgba(100, 181, 246, 0.15);" class="section-skill">
+                                                <b>Web:</b>
+                                                <span class="skill skilld">🐘 PHP</span>
+                                                <span class="skill skilld">🗿 Legacy код</span>
+                                                <span class="skill skilld">🛒 CRM VamShop</span>
+                                                <span class="skill skilld">🔁 Rest API / SOAP</span>
+                                                <span class="skill skilld">🎨 CSS, SCSS, HTML</span>
+                                                <span class="skill skilld">🟨 JavaScript</span>
+                                                <span class="skill skilld">🔍 jQuery</span>
+                                                <span class="skill skilld">🌐 Full-Stack разработка</span>
+                                                <span class="skill skilld">🎪 Laravel</span>
+                                                <span class="skill skilld">📝 Swagger</span>
+                                                <span class="skill skilld">🌐 Apache</span>
+                                                <span class="skill skilld">🏢 Bitrix</span>
+                                            </div>
+                                            <div style="background-color: rgba(103, 80, 164, 0.15);" class="section-skill">
+                                                <b>Desktop:</b>
+                                                <span class="skill skilld">💻 .NET C#</span>
+                                                <span class="skill skilld">➕ WinUI3</span>
+                                                <span class="skill skilld">➕ UWP</span>
+                                                <span class="skill skilld">➕ WPF</span>
+                                                <span class="skill skilld">➕ WinForms</span>
+                                                <span class="skill skilld">➕ sqlite-net-pcl</span>
+                                            </div>
+                                            <div style="background-color: rgba(76, 175, 80, 0.15);" class="section-skill">
+                                                <b>Android:</b>
+                                                <span class="skill skilld">💻 .NET C#</span>
+                                                <span class="skill skilld">💻 Android(Java)</span>
+                                                <span class="skill skilld">💻 Xamarin</span>
+                                                <span class="skill skilld">➕ Picasso</span>
+                                                <span class="skill skilld">➕ SugarORM</span>
+                                            </div>
+                                            <div style="background-color: rgba(255, 152, 0, 0.15);" class="section-skill">
+                                                <b>API:</b>
+                                                <span class="skill skilld">➕ VK API</span>
+                                                <span class="skill skilld">➕ Telegram API</span>
+                                                <span class="skill skilld">➕ OZON</span>
+                                                <span class="skill skilld">➕ WB</span>
+                                                <span class="skill skilld">➕ 5Post</span>
+                                                <span class="skill skilld">➕ СмерМега</span>
+                                                <span class="skill skilld">➕ Yandex</span>
+                                            </div>
+                                            <div style="background-color: rgba(96, 125, 139, 0.15);" class="section-skill">
+                                                <b>Server:</b>
+                                                <span class="skill skilld">📊 SQL, MySQL, PostgreSQL, ORM, MariaDB</span>
+                                                <span class="skill skilld">🐧Linux CentOS/Ubuntu/Debian CMD</span>
+                                                <span class="skill skilld">➕ Postfix</span>
+                                                <span class="skill skilld">➕ Apache2</span>
+                                                <span class="skill skilld">➕ DNS</span>
+                                                <span class="skill skilld">➕ HTTPS</span>
+                                            </div>
+                                            <div style="background-color: rgba(120, 144, 156, 0.1);" class="section-skill">
+                                                <b>More:</b>
+                                                <span class="skill skilld">🔀 Git</span>
+                                                <span class="skill skilld">➕ ЮзерСкриптинг</span>
+                                                <span class="skill skilld">➕ Плагины для хрома</span>
+                                                <span class="skill skilld">➕ GIT</span>
+                                                <span class="skill skilld">⚠ Если я чего-то не умею - значит придётся научиться.</span>
+                                                <span class="skill skilld">🤖 API MarketPlace и... разберёмся, прочитаем документацию</span>
+                                            </div>
+                                        </div>
+                                        <div id="want_to_study" class="section">
+                                            <h2 style="
                 display: flex;
                 align-items: center;
             ">
-                    <emote style="width: 40px; height: 40px;" name="(24)"></emote>
-                    <p style="padding-left: 10px; margin-block-end: 0;"> Хочу освоить / осваиваю</p>
-                </h2>
-                <span class="skill">💻 ASP.NET</span>
-          
-                <span class="skill">🎪 Symfony</span>
-                <span class="skill">🔄 Yii2 </span>
-                <span class="skill">🏢 Bitrix24</span>
-                <span class="skill">🐳 Docker</span>
-                <span class="skill">✔️ PHPUnit</span>
-                <span class="skill">🧪 Codeception</span>
-            </div>
-
-            <div id="experience" class="section">
-                <h2 style="
+                                                <emote style="width: 40px; height: 40px;" name="(24)"></emote>
+                                                <p style="padding-left: 10px; margin-block-end: 0;"> Хочу освоить / осваиваю</p>
+                                            </h2>
+                                            <span class="skill">💻 ASP.NET</span>
+                                            <span class="skill">🎪 Symfony</span>
+                                            <span class="skill">🔄 Yii2</span>
+                                            <span class="skill">🏢 Bitrix24</span>
+                                            <span class="skill">🐳 Docker</span>
+                                            <span class="skill">✔️ PHPUnit</span>
+                                            <span class="skill">🧪 Codeception</span>
+                                        </div>
+                                        <div id="experience" class="section">
+                                            <h2 style="
                 display: flex;
                 align-items: center;
             ">
-                    <emote style="width: 40px; height: 40px;" name="(12)"></emote>
-                    <p style="padding-left: 10px; margin-block-end: 0;
+                                                <emote style="width: 40px; height: 40px;" name="(12)"></emote>
+                                                <p style="padding-left: 10px; margin-block-end: 0;
                 "> Опыт работы</p>
-                </h2>
-                <div style="background: rgba(100, 181, 246, 0.15);" class="section-experience">
-                    <h3>🦊 Интернет магазин Здоровеево</h3>
-                    <div class="experience-details">
-                        <p>📅 <span class="detail">2020 - 2024</span></p>
-                        
-                        <div class="experience-item">
-                            <span class="skill">🐘 PHP</span>
-                            <p>🔧 Сопровождение и доработка конфигураций CRM VamShop</p>
-                        </div>
-                        
-                        <div class="experience-item">
-                            <span class="skill">💻 Java</span>
-                            <span class="skill">📱 Swift</span>
-                            <p>🔧 Разработка фирменных android и IOS приложений</p>
-                        </div>
-                        
-                        <div class="experience-item">
-                            <span class="skill">📊 MySQL</span>
-                            <p>🔧 Разработка и защита базы данных</p>
-                        </div>
-                        
-                        <div class="marketplaces-integration">
-                            <img class="marketplace-icon" src="icons/ozon.png" alt="Ozon">
-                            <img class="marketplace-icon" src="icons/sber.png" alt="SberMarket">
-                            <img class="marketplace-icon" src="icons/wb.png" alt="Wildberries">
-                            <img class="marketplace-icon" src="icons/yandex.png" alt="Yandex Market">
-                            <img class="marketplace-icon" src="icons/fivepost.jpg" alt="5Post">
-                            <p>🔧 <strong>Интеграция Маркетплейсов</strong> (OZON, WB, YandexMarket, СберМегаМаркет, 5Post)</p>
-                        </div>
-                        
-                        <div class="experience-item">
-                            <span class="skill">🔁 API</span>
-                            <span class="skill">🐘 PHP</span>
-                            <p>🔧 Автоматизация процессов через API: получение заказов, управление остатками, ценами и описаниями товаров</p>
-                        </div>
-                        
-                        <div class="experience-item">
-                            <span class="skill">🐘 PHP</span>
-                            <span class="skill">🟨 JavaScript</span>
-                            <p>🔧 Система печати этикеток с интеграцией принтеров и штрих-кодов</p>
-                        </div>
-                        
-                        <div class="experience-item">
-                            <span class="skill">📊 SQL</span>
-                            <span class="skill">📈 Аналитика</span>
-                            <p>🔧 Создание автоматических таблиц для аналитики данных</p>
-                        </div>
-                        
-                        <div class="experience-item">
-                            <span class="skill">📱 Xamarin</span>
-                            <span class="skill">💻 Java</span>
-                            <p>🔧 Разработка мобильного приложения для интеграции с сайтом</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="background: rgba(103, 80, 164, 0.15);" class="section-experience">
-                    <h3>🦊 Техконсалт</h3>
-                    <div class="experience-details">
-                        <p>📅 <span class="detail">2024 - настоящее время</span></p>
-                        
-                        <div class="experience-item">
-                            <span class="skill">💻 C#</span>
-                            <span class="skill">📊 SQL</span>
-                            <p>🔧 Разработка системы мониторинга зачислений/списаний игровой валюты для отелей</p>
-                        </div>
-                        
-                        <div class="experience-item">
-                            <span class="skill">📱 Xamarin</span>
-                            <span class="skill">📱 Java</span>
-                            <p>🔧 Разработка мобильного приложения для статистики посетителей отелей</p>
-                        </div>
-
-                        <div class="experience-item">
-                            <span class="skill skilld">🐘 PHP</span>
-                            <span class="skill skilld">🔁 Rest API / SOAP</span>
-                            <span class="skill skilld">🎨 CSS, SCSS, HTML</span>
-                            <span class="skill skilld">🟨 JavaScript</span>
-                            <div class="fluent-link-container">
-                              
-                                <p>🔧 Разработка WebApp   <a href="https://app.slotlogic.eu" target="_blank" class="fluent-link">
-                                    <span class="fluent-link-icon">🔗</span>
-                                    <span class="fluent-link-text">app.slotlogic.eu</span>
-                                    <span class="fluent-link-arrow">→</span>
-                                </a> для отображения статистики посетителя заведения, зачислений, списаний и т.д.</p>
-                            </div>
-                        </div>
-
-                    
-
-                        <div class="experience-item">
-                            <span class="skill skilld">🐘 PHP</span>
-                            <span class="skill skilld">🔁 Rest API / SOAP</span>
-                            <p>🔧 Реализация API для возможности автоматизации на строне клиентов</p>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-
-
-
-
-          
-
-
-
-<div id="vkm" class="section" class="project-container">
-    <div class="project-header">
-        <h2>🎵 Music M (VK M)</h2>
-        <div class="project-tags">
-            <span class="tag winui">WinUI3</span>
-            <span class="tag csharp">C#</span>
-            <span class="tag api">VK API</span>
-            <span class="tag pet-project">Pet Project</span>
-        </div>
-    </div>
-
-    <div class="project-content">
-        <div class="project-description">
-            <div class="description-card">
-                <h3>💡 Концепция</h3>
-                <p>Music M - это не просто pet-проект, а страсть и энтузиазм, воплощённые в реальность. Приложение решает проблему громоздкого процесса прослушивания музыки ВКонтакте, предлагая быстрый и удобный доступ к вашей медиатеке.</p>
-            </div>
-
-            <div class="description-card">
-                <h3>🚀 Разработка</h3>
-                <p>Изначально задуманное как простой плеер, приложение выросло в полноценный продукт на WinUI3 и C#. Использование VKNet API обеспечивает стабильную работу и прямой доступ к музыкальной библиотеке ВК.</p>
-            </div>
-
-            <div class="description-card">
-                <h3>✨ Особенности</h3>
-                <ul class="features-list">
-                    <li>Быстрый доступ без браузера</li>
-                    <li>Чистый и минималистичный интерфейс</li>
-                    <li>Высокая производительность</li>
-                    <li>Интеграция с VK музыкой</li>
-                </ul>
-            </div>
-
-            <a href="https://github.com/MaKrotos/Music-M/tree/master" target="_blank" class="github-button">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.293 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path>
-                </svg>
-                Исходный код на GitHub
-            </a>
-        </div>
-
-        <div class="project-gallery">
-            <div class="gallery-grid">
-                <img src="vkm/ (1).png" alt="Music M Screenshot 1" class="gallery-item" onclick="openPopup(event)">
-                <img src="vkm/ (2).png" alt="Music M Screenshot 2" class="gallery-item" onclick="openPopup(event)">
-                <img src="vkm/ (3).png" alt="Music M Screenshot 3" class="gallery-item" onclick="openPopup(event)">
-                <img src="vkm/ (4).png" alt="Music M Screenshot 4" class="gallery-item" onclick="openPopup(event)">
-                <img src="vkm/ (5).png" alt="Music M Screenshot 5" class="gallery-item" onclick="openPopup(event)">
-                <img src="vkm/ (6).png" alt="Music M Screenshot 6" class="gallery-item" onclick="openPopup(event)">
-            </div>
-        </div>
-    </div>
-</div>
-
-         
-
-
-
-
-            <div id="tg" class="section" class="project-container">
-                <div class="section-header">
-                    <img width="50" height="50" src="icons/tg.png" alt="Telegram Logo">
-                    <h2>Telegram API</h2>
-                    <div class="tech-tags">
-                        <span class="tech-tag">🤖 Боты</span>
-                        <span class="tech-tag">🗃️ Базы данных</span>
-                        <span class="tech-tag">⚙️ Автоматизация</span>
-                    </div>
-                </div>
-            
-                <div class="telegram-content">
-                    <div class="telegram-description">
-                        <div class="description-card">
-                            <h3>🔧 Мои работы с Telegram API</h3>
-                            <p>Я разрабатываю сложных Telegram-ботов с полноценной логикой, а не просто эхо-ботов. Каждый бот включает:</p>
-                            <ul class="feature-list">
-                                <li>Интеграцию с базой данных</li>
-                                <li>Многоуровневое интерактивное меню</li>
-                                <li>Систему взаимодействия с пользователем</li>
-                                <li>Автоматизированные процессы</li>
-                            </ul>
-                        </div>
-            
-                        <div class="description-card demo-card">
-                            <h3>🎥 Пример работы</h3>
-                            <p>В видео демонстрируется мой личный бот для автоматического создания постов с возможностью редактирования и автопубликации в сообщества ВКонтакте.</p>
-                            
-                        </div>
-                    </div>
-            
-                    <div class="telegram-demo">
-                        <div class="video-container">
-                            <video controls class="demo-video">
-                                <source src="video/tgvideo.mp4" type="video/mp4">
-                                Ваш браузер не поддерживает видео
-                            </video>
-                            <div class="video-caption">Демонстрация работы бота</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="android" class="section" class="android-section">
-                <div class="android-header">
-                    <img src="icons/android.png" alt="Android" class="android-icon">
-                    <h2>Android Development</h2>
-                    <div class="android-tags">
-                        <span class="android-tag">📱 Native</span>
-                        <span class="android-tag">☕ Java</span>
-                        <span class="android-tag">📦 APK</span>
-                        <span class="android-tag">🍎 iOS Port</span>
-                    </div>
-                </div>
-            
-                <div class="android-content">
-                    <div class="android-description">
-                        <div class="timeline">
-                            <div class="timeline-item">
-                               
-                                <div class="timeline-content">
-                                    <h3>Приложение для "Здоровеево"</h3>
-                                    <p>Полноценное нативное приложение для интернет-магазина, разработанное с нуля как дипломный проект.</p>
-                                </div>
-                            </div>
-            
-                            <div class="timeline-item">
-                                <div class="timeline-content">
-                                    <h3>Вызовы разработки</h3>
-                                    <p>Пришлось начинать с нуля без исходников предыдущего приложения. За 4 месяца создал стабильное приложение с корзиной, избранным, новостями и исправил редкие краши на старых устройствах.</p>
-                                </div>
-                            </div>
-            
-                            <div class="timeline-item">
-                                <div class="timeline-content">
-                                    <h3>iOS версия</h3>
-                                    <p>После успеха Android-версии, за 3 месяца разработал и опубликовал версию для iOS в AppStore.</p>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <div class="android-features">
-                            <div class="feature-card">
-                                <div class="feature-icon">🚀</div>
-                                <h4>Быстрая разработка</h4>
-                                <p>От нуля до публикации за 4 месяца без предыдущего опыта в Android</p>
-                            </div>
-            
-                            <div class="feature-card">
-                                <div class="feature-icon">🐛</div>
-                                <h4>Исправление багов</h4>
-                                <p>Устранение редких крашей, связанных с устаревшим WebView</p>
-                            </div>
-            
-                        
-                        </div>
-            
-                        <a href="files/Здоровеево.apk" class="download-button">
-                            <img src="icons/zdoroveevo.png" alt="Здоровеево">
-                            <span>Скачать APK</span>
-                        </a>
-                    </div>
-            
-                    <div class="android-gallery">
-                        <div class="gallery-grid">
-                            <img src="android/(1).jpg" alt="Скриншот приложения 1" onclick="openPopup(event)">
-                            <img src="android/(2).jpg" alt="Скриншот приложения 2" onclick="openPopup(event)">
-                            <img src="android/(3).jpg" alt="Скриншот приложения 3" onclick="openPopup(event)">
-                            <img src="android/(4).jpg" alt="Скриншот приложения 4" onclick="openPopup(event)">
-                            <img src="android/(5).jpg" alt="Скриншот приложения 5" onclick="openPopup(event)">
-                            <img src="android/(6).jpg" alt="Скриншот приложения 6" onclick="openPopup(event)">
-                            <img src="android/(7).jpg" alt="Скриншот приложения 7" onclick="openPopup(event)">
-                            <img src="android/(8).jpg" alt="Скриншот приложения 8" onclick="openPopup(event)">
-                            <img src="android/(9).jpg" alt="Скриншот приложения 9" onclick="openPopup(event)">
-                            <img src="android/(10).jpg" alt="Скриншот приложения 10" onclick="openPopup(event)">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div id="Laravel" class="section" class="laravel-section">
-                <div class="laravel-header">
-                    <img src="icons/Laravel.png" alt="Laravel" class="laravel-icon">
-                    <h2>Laravel Development</h2>
-                    <div class="laravel-tags">
-                        <span class="laravel-tag">🐘 PHP</span>
-                        <span class="laravel-tag">🛠️ Backend</span>
-                        <span class="laravel-tag">🐧 Linux</span>
-                        <span class="laravel-tag">🚀 Apache</span>
-                    </div>
-                </div>
-            
-                <div class="laravel-content">
-                    <div class="laravel-description">
-                        <div class="project-card">
-                            <h3>Statsly - Сервис аналитики</h3>
-                            <p class="project-description">Собственный сервис для отслеживания статистики в настольных приложениях, разработанный на Laravel и работающий на Apache под Linux.</p>
-                            
-                            <div class="project-status">
-                                <div class="status-indicator"></div>
-                                <span>В активной разработке</span>
-                            </div>
-            
-                            <div class="project-features">
-                                <div class="feature-item">
-                                    <div class="feature-icon">📊</div>
-                                    <p>Сбор статистики из приложения VK M</p>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-icon">✉️</div>
-                                    <p>Система активации аккаунтов (временно недоступна отправка писем)</p>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-icon">🔄</div>
-                                    <p>Постоянное развитие и добавление нового функционала</p>
-                                </div>
-                            </div>
-            
-                            <a href="https://statsly.ru/" target="_blank" class="laravel-button">
-                                <img src="icons/Laravel.png" alt="Laravel">
-                                <span>Перейти на Statsly</span>
-                            </a>
-                        </div>
-                    </div>
-            
-                    <div class="laravel-gallery">
-                        <div class="screenshot-grid">
-                            <img src="statsly/statsly1.png" alt="Statsly Screenshot 1" onclick="openPopup(event)">
-                            <img src="statsly/statsly2.png" alt="Statsly Screenshot 2" onclick="openPopup(event)">
-                            <img src="statsly/statsly3.png" alt="Statsly Screenshot 3" onclick="openPopup(event)">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="uwp" class="section">
-
-                <h2 style="
-                display: flex;
-                align-items: center;
-            "> <img width="40" height="40" style="padding-right: 10px;" src="icons/uwp.png" alt="">UWP / Microsoft
-                    Store</h2>
-
-                <div style="display: flex; justify-content: center; align-items: center;">
-                    <div
-                        style="display: flex;align-items: flex-start;align-content: stretch;flex-wrap: nowrap;flex-direction: row;justify-content: center;">
-                        <div style="display: flex;flex-direction: column;justify-content: center;">
-                            <div>
-                                <p>Как-то Microsoft позволила разрабатывать сторонним разработчикам приложения для Xbox
-                                    GameBar.</p>
-
-                                <p>Это что-то вроде меню плавающих виджетов/программок, плавающих над всеми другими
-                                    окнами и легко открываемых в нужный момент. Открывается при нажатии комбинации Win+G
-                                    на Win10 и выше.</p>
-
-                                <p>Ну и я, как узнал, решил вписаться, попробовать.</p>
-
-                                <p>На тот момент, документация была весьма скудная. Много чего нужного описано не было.
-                                    Был только, так сказать, стартер пак о том, как сделать сам виджет и исходники с
-                                    примерами.</p>
-
-                                <p>Не было тогда ничего описано о том, как выставить цвет приложения, соотвествующий
-                                    теме GameBar. Не было описано как установить соответсвующую прозрачность. Как
-                                    сделать нормально окно настроек.</p>
-
-                                <p>В общем мне пришлось лазить по дебрям, выискивая нужные параметры, события и так
-                                    далее.</p>
-
-                                <p>Ну и... В процессе я сделал пару виджетов, которые разместил в Microsoft Store</p>
-
-                                <p>Одно из них, собирает инфо со всех сетевых интерфейсов и показывает сколько они
-                                    отдают и получают данных.</p>
-                                <p>Второе позволяет размещать Web окно поверх приложений. Может быть удобно для
-                                    стримеров.</p>
-
-                                <br>
-
-                                <a target="_blank" href="https://apps.microsoft.com/detail/9nx3ntq5sj3r?hl=ru-ru&gl=RU"
-                                    class="telegram-button"
-                                    style="width: fit-content;display: flex;align-items: center;flex-direction: row;flex-wrap: nowrap;align-content: space-between;justify-content: flex-start;">
-                                    <img style="margin-right: 10px;" width="30" height="30" src="icons/netspeed.png">
-                                    Net speed graph
-                                </a>
-                                <a target="_blank" href="https://apps.microsoft.com/detail/9p2crnzdpvxl?hl=ru-ru&gl=RU"
-                                    class="telegram-button"
-                                    style="width: fit-content;display: flex;align-items: center;flex-direction: row;flex-wrap: nowrap;align-content: space-between;justify-content: flex-start;">
-                                    <img style="margin-right: 10px;" width="30" height="30" src="icons/webpage.png">
-                                    Simple Web Page
-                                </a>
-
-
-
-
-
-                            </div>
-                            <div
-                                style="display: flex;flex-wrap: wrap;justify-content: center;align-content: flex-start;align-items: flex-start;">
-                                <img style="width: 300px" class="section photo" onclick="openPopup(event)"
-                                    src="uwp/brow1.png" alt="Изображение">
-                                <img style="width: 300px" class="section photo" onclick="openPopup(event)"
-                                    src="uwp/brow2.png" alt="Изображение">
-                                <img style="width: 300px" class="section photo" onclick="openPopup(event)"
-                                    src="uwp/brow3.png" alt="Изображение">
-                                <img style="width: 300px" class="section photo" onclick="openPopup(event)"
-                                    src="uwp/net.png" alt="Изображение">
-                                <img style="width: 300px" class="section photo" onclick="openPopup(event)"
-                                    src="uwp/net2.png" alt="Изображение">
-                                <img style="width: 300px" class="section photo" onclick="openPopup(event)"
-                                    src="uwp/net3.png" alt="Изображение">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div id="education" class="section">
-                <h2 style="
+                                            </h2>
+                                            <div style="background: rgba(100, 181, 246, 0.15);" class="section-experience">
+                                                <h3>🦊 Интернет магазин Здоровеево</h3>
+                                                <div class="experience-details">
+                                                    <p>
+                                                        📅
+                                                        <span class="detail">2020 - 2024</span>
+                                                    </p>
+                                                    <div class="experience-item">
+                                                        <span class="skill">🐘 PHP</span>
+                                                        <p>🔧 Сопровождение и доработка конфигураций CRM VamShop</p>
+                                                    </div>
+                                                    <div class="experience-item">
+                                                        <span class="skill">💻 Java</span>
+                                                        <span class="skill">📱 Swift</span>
+                                                        <p>🔧 Разработка фирменных android и IOS приложений</p>
+                                                    </div>
+                                                    <div class="experience-item">
+                                                        <span class="skill">📊 MySQL</span>
+                                                        <p>🔧 Разработка и защита базы данных</p>
+                                                    </div>
+                                                    <div class="marketplaces-integration">
+                                                        <img class="marketplace-icon" src="icons/ozon.png" alt="Ozon">
+                                                        <img class="marketplace-icon" src="icons/sber.png" alt="SberMarket">
+                                                        <img class="marketplace-icon" src="icons/wb.png" alt="Wildberries">
+                                                        <img class="marketplace-icon" src="icons/yandex.png" alt="Yandex Market">
+                                                        <img class="marketplace-icon" src="icons/fivepost.jpg" alt="5Post">
+                                                        <p>
+                                                            🔧
+                                                            <strong>Интеграция Маркетплейсов</strong>
+                                                            (OZON, WB, YandexMarket, СберМегаМаркет, 5Post)
+                                                        </p>
+                                                    </div>
+                                                    <div class="experience-item">
+                                                        <span class="skill">🔁 API</span>
+                                                        <span class="skill">🐘 PHP</span>
+                                                        <p>🔧 Автоматизация процессов через API: получение заказов, управление остатками, ценами и описаниями товаров</p>
+                                                    </div>
+                                                    <div class="experience-item">
+                                                        <span class="skill">🐘 PHP</span>
+                                                        <span class="skill">🟨 JavaScript</span>
+                                                        <p>🔧 Система печати этикеток с интеграцией принтеров и штрих-кодов</p>
+                                                    </div>
+                                                    <div class="experience-item">
+                                                        <span class="skill">📊 SQL</span>
+                                                        <span class="skill">📈 Аналитика</span>
+                                                        <p>🔧 Создание автоматических таблиц для аналитики данных</p>
+                                                    </div>
+                                                    <div class="experience-item">
+                                                        <span class="skill">📱 Xamarin</span>
+                                                        <span class="skill">💻 Java</span>
+                                                        <p>🔧 Разработка мобильного приложения для интеграции с сайтом</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div style="background: rgba(103, 80, 164, 0.15);" class="section-experience">
+                                                <h3>🦊 Техконсалт</h3>
+                                                <div class="experience-details">
+                                                    <p>
+                                                        📅
+                                                        <span class="detail">2024 - настоящее время</span>
+                                                    </p>
+                                                    <div class="experience-item">
+                                                        <span class="skill">💻 C#</span>
+                                                        <span class="skill">📊 SQL</span>
+                                                        <p>🔧 Разработка системы мониторинга зачислений/списаний игровой валюты для отелей</p>
+                                                    </div>
+                                                    <div class="experience-item">
+                                                        <span class="skill">📱 Xamarin</span>
+                                                        <span class="skill">📱 Java</span>
+                                                        <p>🔧 Разработка мобильного приложения для статистики посетителей отелей</p>
+                                                    </div>
+                                                    <div class="experience-item">
+                                                        <span class="skill skilld">🐘 PHP</span>
+                                                        <span class="skill skilld">🔁 Rest API / SOAP</span>
+                                                        <span class="skill skilld">🎨 CSS, SCSS, HTML</span>
+                                                        <span class="skill skilld">🟨 JavaScript</span>
+                                                        <div class="fluent-link-container">
+                                                            <p>
+                                                                🔧 Разработка WebApp
+                                                                <a
+                                                                    style="padding: .2rem 0.2rem;"
+                                                                    href="https://app.slotlogic.eu"
+                                                                    target="_blank"
+                                                                    class="fluent-link"
+                                                                >
+                                                                    <span class="fluent-link-icon">🔗</span>
+                                                                    <span class="fluent-link-text">app.slotlogic.eu</span>
+                                                                    <span class="fluent-link-arrow">→</span>
+                                                                </a>
+                                                                для отображения статистики посетителя заведения, зачислений, списаний и т.д.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="experience-item">
+                                                        <span class="skill skilld">🐘 PHP</span>
+                                                        <span class="skill skilld">🔁 Rest API / SOAP</span>
+                                                        <p>🔧 Реализация API для возможности автоматизации на строне клиентов</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="vkm" class="section" class="project-container">
+                                            <div class="project-header">
+                                                <h2>
+                                                    <img
+                                                        width="50"
+                                                        height="50"
+                                                        src="icons/vkm.png"
+                                                        style="margin-bottom: -10px;"
+                                                    >
+                                                    Music M (VK M)
+                                                </h2>
+                                                <div class="project-tags">
+                                                    <span class="tag" style="background: rgba(0,120,212,.2);">WinUI3</span>
+                                                    <span class="tag" style="background: rgba(128,0,128,.2)">C#</span>
+                                                    <span class="tag" style="background: rgba(70,130,180,.2)">VK API</span>
+                                                    <span class="tag" style="background: rgba(255,215,0,.2)">Pet Project</span>
+                                                </div>
+                                            </div>
+                                            <div class="project-content">
+                                                <div class="project-description">
+                                                    <div class="description-card">
+                                                        <h3>💡 Концепция</h3>
+                                                        <p>Music M - это не просто pet-проект, а страсть и энтузиазм, воплощённые в реальность. Приложение решает проблему громоздкого процесса прослушивания музыки ВКонтакте, предлагая быстрый и удобный доступ к вашей медиатеке.</p>
+                                                    </div>
+                                                    <div class="description-card">
+                                                        <h3>🚀 Разработка</h3>
+                                                        <p>Изначально задуманное как простой плеер, приложение выросло в полноценный продукт на WinUI3 и C#. Использование VKNet API обеспечивает стабильную работу и прямой доступ к музыкальной библиотеке ВК.</p>
+                                                    </div>
+                                                    <div class="description-card">
+                                                        <h3>✨ Особенности</h3>
+                                                        <ul class="features-list">
+                                                            <li>Быстрый доступ без браузера</li>
+                                                            <li>Чистый и минималистичный интерфейс</li>
+                                                            <li>Высокая производительность</li>
+                                                            <li>Интеграция с VK музыкой</li>
+                                                        </ul>
+                                                    </div>
+                                                    <a href="https://github.com/MaKrotos/Music-M/tree/master" target="_blank" class="github-button">
+                                                        <svg
+                                                            width="20"
+                                                            height="20"
+                                                            viewBox="0 0 24 24"
+                                                            fill="currentColor"
+                                                            style="margin-right: 8px;"
+                                                        >
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.293 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path>
+                                                        </svg>
+                                                        Исходный код на GitHub
+                                                    </a>
+                                                </div>
+                                                <div class="gallery-grid">
+                                                    <img
+                                                        src="vkm/ (1).png"
+                                                        alt="Music M Screenshot 1"
+                                                        class="gallery-item"
+                                                        onclick="openPopup(event)"
+                                                    >
+                                                    <img
+                                                        src="vkm/ (2).png"
+                                                        alt="Music M Screenshot 2"
+                                                        class="gallery-item"
+                                                        onclick="openPopup(event)"
+                                                    >
+                                                    <img
+                                                        src="vkm/ (3).png"
+                                                        alt="Music M Screenshot 3"
+                                                        class="gallery-item"
+                                                        onclick="openPopup(event)"
+                                                    >
+                                                    <img
+                                                        src="vkm/ (4).png"
+                                                        alt="Music M Screenshot 4"
+                                                        class="gallery-item"
+                                                        onclick="openPopup(event)"
+                                                    >
+                                                    <img
+                                                        src="vkm/ (5).png"
+                                                        alt="Music M Screenshot 5"
+                                                        class="gallery-item"
+                                                        onclick="openPopup(event)"
+                                                    >
+                                                    <img
+                                                        src="vkm/ (6).png"
+                                                        alt="Music M Screenshot 6"
+                                                        class="gallery-item"
+                                                        onclick="openPopup(event)"
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="tg" class="section" class="project-container">
+                                            <div class="project-header">
+                                                <h2>
+                                                    <img
+                                                        width="50"
+                                                        height="50"
+                                                        src="icons/tg.png"
+                                                        style="margin-bottom: -10px;"
+                                                    >
+                                                    Telegram API
+                                                </h2>
+                                                <div class="project-tags">
+                                                    <span class="tag" style="background: rgba(81, 43, 212, 0.2);">ASP.NET</span>
+                                                    <span class="tag" style="background: rgba(23, 134, 0, 0.2); ">C#</span>
+                                                    <span class="tag" style="background: rgba(119, 123, 179, 0.2);">PHP</span>
+                                                    <span class="tag" style="background: rgba(255, 107, 107, 0.2);">REST API</span>
+                                                    <span class="tag" style="background: rgba(37, 211, 102, 0.2);">Боты</span>
+                                                    <span class="tag" style="background: rgba(242, 145, 17, 0.2);">SQL</span>
+                                                </div>
+                                            </div>
+                                            <div class="telegram-content">
+                                                <div class="telegram-description">
+                                                    <div class="description-card">
+                                                        <h3>🔧 Мои работы с Telegram API</h3>
+                                                        <p>Я разрабатываю сложных Telegram-ботов с полноценной логикой, а не просто эхо-ботов. Каждый бот включает:</p>
+                                                        <ul class="feature-list">
+                                                            <li>Интеграцию с базой данных</li>
+                                                            <li>Многоуровневое интерактивное меню</li>
+                                                            <li>Систему взаимодействия с пользователем</li>
+                                                            <li>Автоматизированные процессы</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="description-card demo-card">
+                                                        <h3>🎥 Пример работы</h3>
+                                                        <p>В видео демонстрируется мой личный бот для автоматического создания постов с возможностью редактирования и автопубликации в сообщества ВКонтакте.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="telegram-demo">
+                                                    <div class="video-container">
+                                                        <video controls class="demo-video">
+                                                            <source src="video/tgvideo.mp4" type="video/mp4">
+                                                            Ваш браузер не поддерживает видео
+                                                        </video>
+                                                        <div class="video-caption">Демонстрация работы бота</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="android" class="section" class="project-container">
+                                            <div class="project-header">
+                                                <h2>
+                                                    <img
+                                                        style="margin-bottom: -10px;"
+                                                        width="50"
+                                                        height="50"
+                                                        src="icons/android.png"
+                                                        alt="Android"
+                                                    >
+                                                    Android Development
+                                                </h2>
+                                                <div class="project-tags">
+                                                    <span class="tag" style="background: rgba(0, 122, 255, 0.2);">📱 Native</span>
+                                                    <span class="tag" style="background: rgba(248, 152, 32, 0.2);">☕ Java</span>
+                                                    <span class="tag" style="background: rgba(52, 152, 219, 0.2);">📦 APK</span>
+                                                    <span class="tag" style="background: rgba(255, 59, 48, 0.2);">🍎 iOS Port</span>
+                                                </div>
+                                            </div>
+                                            <div class="project-content">
+                                                <div class="project-description">
+                                                    <div class="description-card">
+                                                        <h3>Приложение для "Здоровеево"</h3>
+                                                        <p>Полноценное нативное приложение для интернет-магазина, разработанное с нуля как дипломный проект.</p>
+                                                    </div>
+                                                    <div class="description-card">
+                                                        <div class="timeline-content">
+                                                            <h3>Вызовы разработки</h3>
+                                                            <p>Пришлось начинать с нуля без исходников предыдущего приложения. За 4 месяца создал стабильное приложение с корзиной, избранным, новостями и исправил редкие краши на старых устройствах.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="description-card">
+                                                        <div class="timeline-content">
+                                                            <h3>Минимизация и обусфакция</h3>
+                                                            <p>Сейчас, уже все привыкли, что мобильные приложения весят больше 100 МБ. Но мне не нравится подобная тенденция. И я стараюсь уменьшить размер своих приложений. Таким образом, в процессе исследования возможностей обусфакции приложений под Android, получилось достичь значительного прогресса. Ранее приложение весило около 80 мб. Получилось достичь 2,4 МБ, не потеряв кода.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="description-card">
+                                                        <h3>iOS версия</h3>
+                                                        <p>После успеха Android-версии, за 3 месяца разработал и опубликовал версию для iOS в AppStore.</p>
+                                                    </div>
+                                                    <div class="features">
+                                                        <div class="feature-card">
+                                                            <div class="feature-icon">🚀</div>
+                                                            <h4>Быстрая разработка</h4>
+                                                            <p>От нуля до публикации за 4 месяца без предыдущего опыта в Android</p>
+                                                        </div>
+                                                        <div class="feature-card">
+                                                            <div class="feature-icon">🐛</div>
+                                                            <h4>Исправление багов</h4>
+                                                            <p>Устранение редких крашей, связанных с устаревшим WebView</p>
+                                                        </div>
+                                                    </div>
+                                                    <a href="files/Здоровеево.apk" class="download-button">
+                                                        <img src="icons/zdoroveevo.png" alt="Здоровеево">
+                                                        <span>Скачать APK</span>
+                                                    </a>
+                                                </div>
+                                                <div class="android-gallery">
+                                                    <div class="gallery-grid">
+                                                        <img src="android/(2).jpg" alt="Скриншот приложения 2" onclick="openPopup(event)">
+                                                        <img src="android/(3).jpg" alt="Скриншот приложения 3" onclick="openPopup(event)">
+                                                        <img src="android/(4).jpg" alt="Скриншот приложения 4" onclick="openPopup(event)">
+                                                        <img src="android/(6).jpg" alt="Скриншот приложения 6" onclick="openPopup(event)">
+                                                        <img src="android/(7).jpg" alt="Скриншот приложения 7" onclick="openPopup(event)">
+                                                        <img src="android/(10).jpg" alt="Скриншот приложения 10" onclick="openPopup(event)">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="Laravel" class="section" class="project-container">
+                                            <div class="project-header">
+                                                <h2>
+                                                    <img
+                                                        style="margin-bottom: -10px;"
+                                                        width="50"
+                                                        height="50"
+                                                        src="icons/Laravel.png"
+                                                        alt="Laravel"
+                                                        class="laravel-icon"
+                                                    >
+                                                    Laravel Development
+                                                </h2>
+                                                <div class="project-tags">
+                                                    <span class="tag" style="background: rgba(119, 123, 179, 0.2);">🐘 PHP</span>
+                                                    <span class="tag" style="background: rgba(47, 53, 61, 0.2);">🛠️ Backend</span>
+                                                    <span class="tag" style="background: rgba(0, 0, 0, 0.2);">🐧 Linux</span>
+                                                    <span class="tag" style="background: rgba(210, 45, 38, 0.2);">🚀 Apache</span>
+                                                </div>
+                                            </div>
+                                            <div class="project-content">
+                                                <div class="project-description">
+                                                    <div class="description-card">
+                                                        <h3>Statsly - Сервис аналитики</h3>
+                                                        <p class="project-description">Собственный сервис для отслеживания статистики в настольных приложениях и для других целей по API, разработанный на Laravel и работающий на Apache под Linux.</p>
+                                                        <div class="project-features">
+                                                            <div class="feature-item">
+                                                                <div class="feature-icon">📊</div>
+                                                                <p>Сбор статистики по API</p>
+                                                            </div>
+                                                            <div class="feature-item">
+                                                                <div class="feature-icon">✉️</div>
+                                                                <p>Система активации аккаунтов (временно недоступна отправка писем)</p>
+                                                            </div>
+                                                            <div class="feature-item">
+                                                                <div class="feature-icon">🔄</div>
+                                                                <p>Постоянное развитие и добавление нового функционала</p>
+                                                            </div>
+                                                        </div>
+                                                        <a href="https://statsly.ru/" target="_blank" class="laravel-button">
+                                                            <img
+                                                                width="24px"
+                                                                height="24px"
+                                                                src="icons/Laravel.png"
+                                                                alt="Laravel"
+                                                            >
+                                                            <span>Перейти на Statsly</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="laravel-gallery">
+                                                    <div class="gallery-grid">
+                                                        <img src="statsly/statsly1.png" alt="Statsly Screenshot 1" onclick="openPopup(event)">
+                                                        <img src="statsly/statsly2.png" alt="Statsly Screenshot 2" onclick="openPopup(event)">
+                                                        <img src="statsly/statsly3.png" alt="Statsly Screenshot 3" onclick="openPopup(event)">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="uwp" class="section" class="project-container">
+                                            <div class="project-header">
+                                                <h2>
+                                                    <img
+                                                        style="margin-bottom: -10px;"
+                                                        width="50"
+                                                        height="50"
+                                                        src="icons/uwp.png"
+                                                        alt="UWP"
+                                                    >
+                                                    UWP / Microsoft Store
+                                                </h2>
+                                                <div class="project-tags">
+                                                    <span class="tag" style="background: rgba(23, 134, 0, 0.2); ">C#</span>
+                                                    <span class="tag" style="background: rgba(0, 120, 215, 0.2);">Windows</span>
+                                                    <span class="tag" style="background: rgba(0, 169, 255, 0.2);">🎮 Xbox GameBar</span>
+                                                    <span class="tag" style="background: rgba(16, 124, 16, 0.2);">📦 Microsoft Store</span>
+                                                </div>
+                                            </div>
+                                            <div class="project-content">
+                                                <div class="project-description">
+                                                    <div class="description-card">
+                                                        <h3>Виджеты для Xbox GameBar</h3>
+                                                        <p>Разработка плагинов-виджетов для игровой панели Windows, которые работают поверх всех окон и доступны по Win+G.</p>
+                                                    </div>
+                                                    <div class="description-card">
+                                                        <div class="timeline-content">
+                                                            <h3>Вызовы разработки</h3>
+                                                            <p>Документация Microsoft была крайне ограничена - отсутствовала информация о настройке цветов темы, прозрачности и окон настроек. Пришлось самостоятельно исследовать и находить нужные параметры и события.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="description-card">
+                                                        <div class="timeline-content">
+                                                            <h3>Опубликованные приложения</h3>
+                                                            <p>Создал и опубликовал в Microsoft Store два полезных виджета: мониторинг сетевой активности и веб-браузер поверх игр (полезно для стримеров).</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="features">
+                                                        <div class="feature-card">
+                                                            <div class="feature-icon">🔍</div>
+                                                            <h4>Реверс-инжиниринг</h4>
+                                                            <p>Исследование работы GameBar без документации</p>
+                                                        </div>
+                                                        <div class="feature-card">
+                                                            <div class="feature-icon">🎯</div>
+                                                            <h4>Уникальные решения</h4>
+                                                            <p>Реализация функций, не описанных в документации</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="download-links">
+                                                        <a target="_blank" href="https://apps.microsoft.com/detail/9nx3ntq5sj3r?hl=ru-ru&gl=RU" class="store-button">
+                                                            <img src="icons/netspeed.png" alt="Net Speed Graph">
+                                                            <span>Net Speed Graph</span>
+                                                        </a>
+                                                        <a target="_blank" href="https://apps.microsoft.com/detail/9p2crnzdpvxl?hl=ru-ru&gl=RU" class="store-button">
+                                                            <img src="icons/webpage.png" alt="Simple Web Page">
+                                                            <span>Simple Web Page</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="uwp-gallery">
+                                                    <div class="gallery-grid">
+                                                        <img src="uwp/brow1.png" alt="Виджет браузера" onclick="openPopup(event)">
+                                                        <img src="uwp/brow2.png" alt="Настройки браузера" onclick="openPopup(event)">
+                                                        <img src="uwp/brow3.png" alt="Работа браузера" onclick="openPopup(event)">
+                                                        <img src="uwp/net.png" alt="Сетевой монитор" onclick="openPopup(event)">
+                                                        <img src="uwp/net2.png" alt="Графики скорости" onclick="openPopup(event)">
+                                                        <img src="uwp/net3.png" alt="Настройки монитора" onclick="openPopup(event)">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="education" class="section">
+                                            <h2 style="
                 display: flex;
                 align-items: center;
             ">
-                    <emote style="width: 40px; height: 40px;" name="(135)"></emote>
-                    <p style="padding-left: 10px; margin-block-end: 0;
+                                                <emote style="width: 40px; height: 40px;" name="(135)"></emote>
+                                                <p style="padding-left: 10px; margin-block-end: 0;
                 "> Образование</p>
-                </h2>
-                <div class="item">
-                    <h3>🏫 Владимирский
-                        политехнический колледж </h3>
-                    <p>🎓 Программирование в компьютерных системах</p>
-                    <p>📅 2020 год выпуска</p>
-                </div>
-            </div>
-
-
-
-
-
-
-            <div id="fox-traits" class="section">
-                <h2 style="
+                                            </h2>
+                                            <div class="item">
+                                                <h3>
+                                                    🏫 Владимирский
+                        политехнический колледж
+                                                </h3>
+                                                <p>🎓 Программирование в компьютерных системах</p>
+                                                <p>📅 2020 год выпуска</p>
+                                            </div>
+                                        </div>
+                                        <div id="fox-traits" class="section">
+                                            <h2 style="
                 display: flex;
                 align-items: center;
             ">
-                    <emote style="width: 40px; height: 40px;" name="(199)"></emote>
-                    <p style="padding-left: 10px; margin-block-end: 0;"> Мои черты</p>
-                </h2>
-                <p>🧠 Быстро учусь и адаптируюсь к новым задачам</p>
-                <p>🔍 Упорно ищу решения задач, которые кажутся мне сложными.</p>
-                <p>🌙 Люблю много экспериментировать с кодом для нахождение наиболее лучшего решения</p>
-                <p>🎯 Сосредоточен на достижении целей и всегда стремлюсь к совершенству.</p>
-                <p>
-                    <emote style="margin-right: 10px; width: 25px; height: 25px;" name="(29)"></emote>Не успокоюсь, пока
+                                                <emote style="width: 40px; height: 40px;" name="(199)"></emote>
+                                                <p style="padding-left: 10px; margin-block-end: 0;"> Мои черты</p>
+                                            </h2>
+                                            <p>🧠 Быстро учусь и адаптируюсь к новым задачам</p>
+                                            <p>🔍 Упорно ищу решения задач, которые кажутся мне сложными.</p>
+                                            <p>🌙 Люблю много экспериментировать с кодом для нахождение наиболее лучшего решения</p>
+                                            <p>🎯 Сосредоточен на достижении целей и всегда стремлюсь к совершенству.</p>
+                                            <p>
+                                                <emote style="margin-right: 10px; width: 25px; height: 25px;" name="(29)"></emote>
+                                                Не успокоюсь, пока
                     визуально фронт не станет конфеткой. В общем не люблю из-за этого фронт.
-                </p>
-            </div>
-
-            <div onclick="makeFoxes()" id="foxes" class="section foxes">
-                <emote style="width: 40px; height: 40px;" name="(1)"></emote> Кликни
-            </div>
-        </div>
-    </div>
-    <script>
+                                            </p>
+                                        </div>
+                                        <div onclick="makeFoxes()" id="foxes" class="section foxes">
+                                            <emote style="width: 40px; height: 40px;" name="(1)"></emote>
+                                            Кликни
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
 
 
    
@@ -938,11 +991,6 @@
             popupImage.src = event.target.src;
             window.location = "#popup";
         }
-
-    </script>
-
-
-
-</body>
-
-</html>
+                                </script>
+                            </body>
+                        </html>
