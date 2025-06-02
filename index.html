@@ -145,17 +145,7 @@
         ];
 
 
-        setInterval(() => {
-            // Начинаем анимацию исчезновения
-            loadingText.style.opacity = 0;
-
-            setTimeout(() => {
-                currentIndex = (currentIndex + 1) % texts.length;
-                loadingText.textContent = texts[currentIndex];
-                // Начинаем анимацию появления
-                loadingText.style.opacity = 1;
-            }, 300); // время анимации исчезновения
-        }, 4500);
+        
 
         const factContainer = document.querySelector('.fact-container');
         let factIndex = 0;
@@ -169,9 +159,6 @@
             setTimeout(() => {
                 factIndex = Math.floor(Math.random() * facts.length);
                 factContainer.textContent = facts[factIndex];
-
-
-
                 factContainer.style.opacity = 1;
             }, 300);
         }

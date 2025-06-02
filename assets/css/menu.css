@@ -1,125 +1,120 @@
-.itemHeader,.menu {
-    display: flex;
-    align-items: center
+.itemHeader,
+.menu {
+  display: flex;
+  align-items: center;
 }
 
 .menu {
-    overflow-y: auto;
-    overflow-x: hidden;
-    z-index: 5;
-    position: fixed;
-    height: 100%;
-    top: 0;
-    left: 0;
-    width: 100px;
-    background: rgba(255,255,255,.349);
-    backdrop-filter: blur(10px);
-    flex-direction: column;
-    padding: 20px 0;
-    transition: width .3s ease
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 5;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100px;
+  background: rgba(255, 255, 255, 0.349);
+  backdrop-filter: blur(10px);
+  flex-direction: column;
+  padding: 20px 0;
+  transition: width 0.3s ease;
 }
 
 .menu:hover {
-    width: 300px
+  width: 300px;
 }
 
 .menu:hover .menu-item {
-    border-radius: 50px;
-    width: 250px
+  border-radius: 50px;
+  width: 250px;
 }
 
 .itemHeader {
-    justify-content: center;
-    min-width: 60px
+  justify-content: center;
+  min-width: 60px;
 }
 
-.content,.menu-item {
-    transition: all .3s ease
+.content,
+.menu-item {
+  transition: all 0.3s ease;
 }
 
 .menu-item {
-    overflow: hidden;
-    margin-left: 5px;
-    margin-right: 5px;
-    min-width: 60px;
-    min-height: 60px;
-    width: 60px;
-    height: 60px;
-    background: rgba(255,255,255,.37);
-    border-radius: 50px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 20px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,.1)
+  overflow: hidden;
+  margin-left: 5px;
+  margin-right: 5px;
+  min-width: 60px;
+  min-height: 60px;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.37);
+  border-radius: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .menu-item:hover {
-    background: rgba(255,255,255,.4);
-    transform: scale(1.1)
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
 }
 
 .menu-item span {
-    font-size: 24px
+  font-size: 24px;
 }
 
+@media (max-width: 768px) {
+  body {
+    padding-top: 50px;
+  }
 
+  .content {
+    padding: 80px 12px 0px 20px !important;
+  }
+  .menu:hover + .content {
+    padding-left: 20px;
+  }
 
-@media (max-width:768px) {
-    body {
-        padding-top: 50px
-    }
+  .container {
+    flex-direction: column;
+  }
 
-   
+  .menu {
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    height: 80px;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 0;
+  }
 
-    .content {
-        padding: 80px 20px 20px !important;
-    }
-    .menu:hover+.content {
-        padding-left: 20px
-    }
+  .menu-item:hover {
+    width: 250px !important;
+  }
 
-    .container {
-        flex-direction: column
-    }
+  .menu,
+  .menu:hover {
+    width: 100%;
+  }
 
-    .menu {
-        overflow-y: hidden;
-        overflow-x: auto;
-        white-space: nowrap;
-        height: 80px;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 10px 0
-    }
-    
-    .menu-item:hover
-    {
-        width: 250px !important;
-    }
+  .menu-item {
+    margin-bottom: 0;
+  }
 
+  .photo {
+    border-radius: 5px;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.39);
+    margin: 10px;
+    padding: 0;
+  }
 
-
-    .menu,.menu:hover {
-        width: 100%
-    }
-
-    .menu-item {
-        margin-bottom: 0
-    }
-
-
-    .photo {
-        border-radius: 5px;
-        width: 100%;
-        max-width: 100%;
-        box-shadow: 0 8px 10px rgba(0,0,0,.39);
-        margin: 10px;
-        padding: 0
-    }
-
-    .fact-container {
-        bottom: 100px
-    }
+  .fact-container {
+    bottom: 100px;
+  }
 }
