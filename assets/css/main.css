@@ -119,3 +119,21 @@ video {
   color: rgba(255, 255, 255, 0.7);
   background: rgba(0, 0, 0, 0.3);
 }
+
+/* Отключение подсветки при нажатии на Android */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Разрешаем выделение текста только для параграфов и заголовков */
+p, h1, h2, h3, h4, h5, h6 {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
