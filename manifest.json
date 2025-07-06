@@ -1,0 +1,38 @@
+{
+    "name": "MaKrotos - Full-Stack Developer Portfolio",
+    "short_name": "MaKrotos",
+    "description": "Портфолио Full-Stack разработчика .NET C#, PHP, Android",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#64b5f6",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "icons/zdoroveevo.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "icons/zdoroveevo.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["business", "productivity", "utilities"],
+    "lang": "ru",
+    "dir": "ltr",
+    "scope": "/",
+    "prefer_related_applications": false,
+    "related_applications": [],
+    "screenshots": [
+        {
+            "src": "android/(1).jpg",
+            "sizes": "1280x720",
+            "type": "image/jpeg",
+            "form_factor": "wide"
+        }
+    ]
+} 

@@ -7,7 +7,7 @@
 .menu {
   overflow-y: auto;
   overflow-x: hidden;
-  z-index: 5;
+  z-index: 15;
   position: fixed;
   height: 100%;
   top: 0;

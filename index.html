@@ -24,6 +24,18 @@
             </div>
         </noscript>
         <!-- /Yandex.Metrika counter -->
+        
+        <!-- Google Analytics (готово к подключению) -->
+        <!--
+        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'GA_MEASUREMENT_ID');
+        </script>
+        -->
+        
         <script>
         window.onload = function () {
             var container = document.querySelector('.container');
@@ -52,7 +64,30 @@
         <!-- /Yandex.Metrika counter -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MaKrotos DevS</title>
+        <title>MaKrotos - Full-Stack Developer | .NET C#, PHP, Android</title>
+        
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="MaKrotos - Full-Stack разработчик .NET C#, PHP, Android. Опыт в веб-разработке, мобильных приложениях и API интеграциях. Портфолио проектов и навыков.">
+        <meta name="keywords" content="разработчик, C#, PHP, Android, Laravel, .NET, программист, full-stack, веб-разработка, мобильные приложения">
+        <meta name="author" content="MaKrotos">
+        <meta name="robots" content="index, follow">
+        
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="MaKrotos - Full-Stack Developer">
+        <meta property="og:description" content="Портфолио разработчика .NET C#, PHP, Android с опытом в веб-разработке и мобильных приложениях">
+        <meta property="og:image" content="https://makrotos.ru/icons/zdoroveevo.png">
+        <meta property="og:url" content="https://makrotos.ru">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="MaKrotos Portfolio">
+        
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="MaKrotos - Full-Stack Developer">
+        <meta name="twitter:description" content="Портфолио разработчика .NET C#, PHP, Android">
+        <meta name="twitter:image" content="https://makrotos.ru/icons/zdoroveevo.png">
+        
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://makrotos.ru">
         <link rel="stylesheet" href="assets/css/background.css">
         <link rel="stylesheet" href="assets/css/menu.css">
         <link rel="stylesheet" href="assets/css/skill.css">
@@ -62,6 +97,48 @@
         <link rel="stylesheet" href="assets/css/loading.css">
         <link rel="stylesheet" href="assets/css/main.css?v=1.2">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="manifest" href="manifest.json">
+        <meta name="theme-color" content="#64b5f6">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="MaKrotos">
+        
+        <!-- PDF Libraries -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "MaKrotos",
+            "jobTitle": "Full-Stack Developer",
+            "description": "Разработчик .NET C#, PHP, Android с опытом в веб-разработке и мобильных приложениях",
+            "url": "https://makrotos.ru",
+            "sameAs": [
+                "https://github.com/MaKrotos/",
+                "https://t.me/MaKrotos"
+            ],
+            "knowsAbout": [
+                ".NET C#",
+                "PHP",
+                "Android Development",
+                "Laravel",
+                "Web Development",
+                "Mobile Applications"
+            ],
+            "worksFor": {
+                "@type": "Organization",
+                "name": "Техконсалт"
+            },
+            "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": "Владимирский политехнический колледж"
+            }
+        }
+        </script>
+        
         <script src="js/extMorphism.js?v=1.1"></script>
     </head>
     <body>
@@ -193,8 +270,16 @@
             clearInterval(intervalId);
         }
         </script>
+        
+       
+        
+        <!-- Scroll to top button -->
+        <button class="scroll-to-top" onclick="scrollToTop()">
+            <span>↑</span>
+        </button>
+        
         <div class="container">
-            <nav class="menu">
+            <nav class="menu" id="mainMenu">
                 <div style="display: contents;">
                     <div class="menu-item" onclick="scrollToSection('about')">
                         <div class="itemHeader">
@@ -296,22 +381,25 @@
                                             </div>
                                             <div style="overflow: visible; white-space: nowrap;">Образование</div>
                                         </div>
-                                        <div class="menu-item" onclick="scrollToSection('fox-traits')">
-                                            <div class="itemHeader">
-                                                <emote style="width: 40px; height: 40px;" name="(199)">
+                                                                                    <div class="menu-item" onclick="scrollToSection('fox-traits')">
+                                                <div class="itemHeader">
+                                                    <emote style="width: 40px; height: 40px;" name="(199)">
+                                                    </div>
+                                                    <div style="overflow: visible; white-space: nowrap;">Мои черты</div>
                                                 </div>
-                                                <div style="overflow: visible; white-space: nowrap;">Мои черты</div>
                                             </div>
-                                        </div>
+                                           
                                     </nav>
                                     <div class="content">
+                                        
+                                        
                                         <div>
                                             <h1 style="color: white;">
                                                 <emote style="width: 60px; height: 60px;" name="hello"></emote>
                                                 MaKrotos 📄
                                             </h1>
                                         </div>
-                                        <div id="about" class="section">
+                                        <div id="about" class="section fade-in">
                                             <h2 style="
                 display: flex;
                 align-items: center;
@@ -322,6 +410,35 @@
                                             </h2>
                                             <p>Привет! Я разработчик .NET C#, PHP, Android(Java) 🦊💻</p>
                                             <p>Живу в Москве.</p>
+                                            
+                                            <!-- Stats section -->
+                                            <div class="about-stats">
+                                                <div class="stat">
+                                                    <span class="number">4+</span>
+                                                    <span class="label">года опыта</span>
+                                                </div>
+                                                <div class="stat">
+                                                    <span class="number">15+</span>
+                                                    <span class="label">API интеграций</span>
+                                                </div>
+                                                <div class="stat">
+                                                    <span class="number">4+</span>
+                                                    <span class="label">маркетплейса интегрировано</span>
+                                                </div>
+                                                <div class="stat">
+                                                    <span class="number">8+</span>
+                                                    <span class="label">языков программирования</span>
+                                                </div>
+                                                <div class="stat">
+                                                    <span class="number">2</span>
+                                                    <span class="label">приложения в Microsoft Store</span>
+                                                </div>
+                                        
+                                                <div class="stat">
+                                                    <span class="number">∞</span>
+                                                    <span class="label">готовность учиться</span>
+                                                </div>
+                                            </div>
                                             <a
                                                 target="_blank"
                                                 href="https://github.com/MaKrotos/"
@@ -351,8 +468,22 @@
                                                 Связаться со мной в
                     Telegram
                                             </a>
+                                            
+                                            <a
+                                                href="#"
+                                                onclick="downloadResume()"
+                                                class="github-button"
+                                                style="margin-top: 10px;"
+                                            >
+                                                <span>📄</span>
+                                                Скачать резюме (PDF)
+                                            </a>
+                                            
+
+                                            
+
                                         </div>
-                                        <div id="skills" class="section">
+                                        <div id="skills" class="section slide-in-left">
                                             <h2 style="
                 display: flex;
                 align-items: center;
@@ -923,6 +1054,7 @@
                     визуально фронт не станет конфеткой. В общем не люблю из-за этого фронт.
                                             </p>
                                         </div>
+                                        
                                         <div onclick="makeFoxes()" id="foxes" class="section foxes">
                                             <emote style="width: 40px; height: 40px;" name="(1)"></emote>
                                             Кликни
@@ -930,31 +1062,524 @@
                                     </div>
                                 </div>
                                 <script>
+                                // Mobile menu functionality
+                                function toggleMobileMenu() {
+                                    const menu = document.getElementById('mainMenu');
+                                    menu.classList.toggle('active');
+                                }
+
+                                // Theme toggle functionality
+                                function toggleTheme() {
+                                    const body = document.body;
+                                    const themeToggle = document.querySelector('.theme-toggle span');
+                                    
+                                    if (body.getAttribute('data-theme') === 'dark') {
+                                        body.removeAttribute('data-theme');
+                                        themeToggle.textContent = '🌙';
+                                        localStorage.setItem('theme', 'light');
+                                    } else {
+                                        body.setAttribute('data-theme', 'dark');
+                                        themeToggle.textContent = '☀️';
+                                        localStorage.setItem('theme', 'dark');
+                                    }
+                                }
+
+                                // Scroll to top functionality
+                                function scrollToTop() {
+                                    const content = document.querySelector('.content');
+                                    content.scrollTo({
+                                        top: 0,
+                                        behavior: 'smooth'
+                                    });
+                                }
+
+                                // Show/hide scroll to top button
+                                function handleScroll() {
+                                    const scrollButton = document.querySelector('.scroll-to-top');
+                                    const content = document.querySelector('.content');
+                                    
+                                    if (content.scrollTop > 300) {
+                                        scrollButton.classList.add('visible');
+                                    } else {
+                                        scrollButton.classList.remove('visible');
+                                    }
+                                }
+
+                                // Contact form handling
+                                function handleContactSubmit(event) {
+                                    event.preventDefault();
+                                    
+                                    const formData = new FormData(event.target);
+                                    const data = Object.fromEntries(formData);
+                                    
+                                    // Here you would typically send the data to your server
+                                    // For now, we'll just show a success message
+                                    alert('Спасибо за сообщение! Я свяжусь с вами в ближайшее время.');
+                                    event.target.reset();
+                                }
+
+                                // Lazy loading for images
+                                function setupLazyLoading() {
+                                    const images = document.querySelectorAll('img[data-src]');
+                                    const imageObserver = new IntersectionObserver((entries, observer) => {
+                                        entries.forEach(entry => {
+                                            if (entry.isIntersecting) {
+                                                const img = entry.target;
+                                                img.src = img.dataset.src;
+                                                img.classList.remove('lazy');
+                                                observer.unobserve(img);
+                                            }
+                                        });
+                                    });
+
+                                    images.forEach(img => imageObserver.observe(img));
+                                }
+
+                               
+
+                                // Register Service Worker
+                                if ('serviceWorker' in navigator) {
+                                    window.addEventListener('load', () => {
+                                        navigator.serviceWorker.register('/sw.js')
+                                            .then(registration => {
+                                                console.log('SW registered: ', registration);
+                                            })
+                                            .catch(registrationError => {
+                                                console.log('SW registration failed: ', registrationError);
+                                            });
+                                    });
+                                }
+
+                                // Add scroll event listener
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    const content = document.querySelector('.content');
+                                    // Временно отключено для восстановления скроллинга
+                                    // content.addEventListener('scroll', handleScroll);
+                                    
+                                    initializeTheme();
+                                    setupLazyLoading();
+                                    setupScrollAnimations();
+                                });
+
+                                // Setup scroll animations (отключено для восстановления скроллинга)
+                                function setupScrollAnimations() {
+                                    // Временно отключено для восстановления скроллинга
+                                    return;
+                                    
+                                    const sections = document.querySelectorAll('.section');
+                                    const observer = new IntersectionObserver((entries) => {
+                                        entries.forEach(entry => {
+                                            if (entry.isIntersecting) {
+                                                entry.target.style.opacity = '1';
+                                                entry.target.style.transform = 'translateY(0)';
+                                            }
+                                        });
+                                    }, {
+                                        threshold: 0.1,
+                                        rootMargin: '0px 0px -50px 0px'
+                                    });
+
+                                    sections.forEach(section => {
+                                        section.style.opacity = '0';
+                                        section.style.transform = 'translateY(30px)';
+                                        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                                        observer.observe(section);
+                                    });
+                                }
 
 
-   
 
-        function scrollToSection(sectionId) {
-            const container = document.querySelector('.content');
-            var element = document.getElementById(sectionId);
-            var rect = element.getBoundingClientRect();
-            var containerRect = container.getBoundingClientRect();
-            container.scrollTo({
-                top: rect.top - containerRect.top + container.scrollTop - 80,
-                behavior: 'smooth'
-            });
+                                // Download resume function
+                                function downloadResume() {
+                                    // Создаем HTML для PDF
+                                    const htmlContent = `
+                                        <!DOCTYPE html>
+                                        <html>
+                                        <head>
+                                            <meta charset="UTF-8">
+                                            <title>MaKrotos - Full-Stack Developer</title>
+                                            <style>
+                                                body {
+                                                    font-family: 'Segoe UI', Arial, sans-serif;
+                                                    line-height: 1.6;
+                                                    color: #333;
+                                                    max-width: 800px;
+                                                    margin: 0 auto;
+                                                    padding: 20px;
+                                                }
+                                                .header {
+                                                    text-align: center;
+                                                    border-bottom: 3px solid #64b5f6;
+                                                    padding-bottom: 20px;
+                                                    margin-bottom: 30px;
+                                                }
+                                                .header h1 {
+                                                    color: #64b5f6;
+                                                    font-size: 2.5em;
+                                                    margin: 0;
+                                                }
+                                                .header p {
+                                                    color: #666;
+                                                    font-size: 1.1em;
+                                                    margin: 10px 0;
+                                                }
+                                                .section {
+                                                    margin-bottom: 30px;
+                                                }
+                                                .section h2 {
+                                                    color: #64b5f6;
+                                                    border-bottom: 2px solid #64b5f6;
+                                                    padding-bottom: 5px;
+                                                    margin-bottom: 15px;
+                                                }
+                                                .skills-grid {
+                                                    display: grid;
+                                                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                                                    gap: 15px;
+                                                }
+                                                .skill-category {
+                                                    background: #f5f5f5;
+                                                    padding: 15px;
+                                                    border-radius: 8px;
+                                                    border-left: 4px solid #64b5f6;
+                                                }
+                                                .skill-category h3 {
+                                                    margin: 0 0 10px 0;
+                                                    color: #333;
+                                                }
+                                                .skill-category ul {
+                                                    margin: 0;
+                                                    padding-left: 20px;
+                                                }
+                                                .skill-category li {
+                                                    margin-bottom: 5px;
+                                                }
+                                                .experience-item {
+                                                    margin-bottom: 20px;
+                                                    padding: 15px;
+                                                    background: #f9f9f9;
+                                                    border-radius: 8px;
+                                                }
+                                                .experience-item h3 {
+                                                    color: #64b5f6;
+                                                    margin: 0 0 10px 0;
+                                                }
+                                                .experience-item .period {
+                                                    color: #666;
+                                                    font-style: italic;
+                                                    margin-bottom: 10px;
+                                                }
+                                                .experience-item ul {
+                                                    margin: 0;
+                                                    padding-left: 20px;
+                                                }
+                                                .project-item {
+                                                    margin-bottom: 15px;
+                                                    padding: 10px;
+                                                    background: #f0f8ff;
+                                                    border-radius: 5px;
+                                                }
+                                                .contact-info {
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    gap: 30px;
+                                                    margin-bottom: 20px;
+                                                }
+                                                .contact-item {
+                                                    text-align: center;
+                                                }
+                                                .contact-item strong {
+                                                    color: #64b5f6;
+                                                }
+                                            </style>
+                                        </head>
+                                        <body>
+                                            <div class="header">
+                                                <h1>MaKrotos</h1>
+                                                <p>Full-Stack Developer</p>
+                                                <div class="contact-info">
+                                                    <div class="contact-item">
+                                                        <strong>Telegram:</strong><br>
+                                                        @MaKrotos
+                                                    </div>
+                                                    <div class="contact-item">
+                                                        <strong>GitHub:</strong><br>
+                                                        github.com/MaKrotos
+                                                    </div>
+                                                    <div class="contact-item">
+                                                        <strong>Сайт:</strong><br>
+                                                        makrotos.ru
+                                                    </div>
+                                                </div>
+                                            </div>
 
-            var event = new MouseEvent('mouseover', {
-                view: window,
-                bubbles: true,
-                cancelable: true
-            });
+                                            <div class="section">
+                                                <h2>О себе</h2>
+                                                <p>Full-Stack разработчик с 4+ годами опыта в веб-разработке, мобильных приложениях и API интеграциях. Специализируюсь на .NET C#, PHP, Android разработке и создании комплексных решений.</p>
+                                            </div>
+
+                                            <div class="section">
+                                                <h2>Навыки</h2>
+                                                <div class="skills-grid">
+                                                    <div class="skill-category">
+                                                        <h3>🌐 Web Development</h3>
+                                                        <ul>
+                                                            <li>PHP, Laravel</li>
+                                                            <li>JavaScript, jQuery</li>
+                                                            <li>CSS, SCSS, HTML</li>
+                                                            <li>Vue3, Bitrix</li>
+                                                            <li>Apache, Swagger</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="skill-category">
+                                                        <h3>💻 Desktop Development</h3>
+                                                        <ul>
+                                                            <li>.NET C#, WinUI3</li>
+                                                            <li>UWP, WPF</li>
+                                                            <li>WinForms</li>
+                                                            <li>SQLite</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="skill-category">
+                                                        <h3>📱 Mobile Development</h3>
+                                                        <ul>
+                                                            <li>Android (Java)</li>
+                                                            <li>Xamarin</li>
+                                                            <li>Picasso, SugarORM</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="skill-category">
+                                                        <h3>🔗 API Integration</h3>
+                                                        <ul>
+                                                            <li>VK API</li>
+                                                            <li>Telegram API</li>
+                                                            <li>OZON, Wildberries</li>
+                                                            <li>Yandex Market</li>
+                                                            <li>5Post, СберМега</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="skill-category">
+                                                        <h3>🖥️ Server & DevOps</h3>
+                                                        <ul>
+                                                            <li>SQL, MySQL, PostgreSQL</li>
+                                                            <li>Linux (CentOS/Ubuntu)</li>
+                                                            <li>Apache2, Postfix</li>
+                                                            <li>DNS, HTTPS</li>
+                                                            <li>Docker, Git</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="section">
+                                                <h2>Опыт работы</h2>
+                                                <div class="experience-item">
+                                                    <h3>🦊 Техконсалт</h3>
+                                                    <div class="period">2024 - настоящее время</div>
+                                                    <ul>
+                                                        <li>Разработка системы мониторинга зачислений/списаний игровой валюты для отелей</li>
+                                                        <li>Создание мобильного приложения для статистики посетителей отелей</li>
+                                                        <li>Разработка WebApp для отображения статистики (app.slotlogic.eu)</li>
+                                                        <li>Реализация API для автоматизации на стороне клиентов</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="experience-item">
+                                                    <h3>🦊 Здоровеево (Интернет-магазин)</h3>
+                                                    <div class="period">2020 - 2024</div>
+                                                    <ul>
+                                                        <li>Сопровождение и доработка CRM VamShop</li>
+                                                        <li>Разработка Android и iOS приложений</li>
+                                                        <li>Интеграция маркетплейсов (OZON, WB, YandexMarket, СберМегаМаркет, 5Post)</li>
+                                                        <li>Автоматизация процессов через API</li>
+                                                        <li>Система печати этикеток с интеграцией принтеров</li>
+                                                        <li>Создание автоматических таблиц для аналитики данных</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="section">
+                                                <h2>Ключевые проекты</h2>
+                                                <div class="project-item">
+                                                    <strong>VK Music M</strong> - WinUI3 приложение для прослушивания музыки ВКонтакте
+                                                </div>
+                                                <div class="project-item">
+                                                    <strong>Telegram боты</strong> - Сложные боты с интеграцией баз данных и API
+                                                </div>
+                                                <div class="project-item">
+                                                    <strong>Android приложение "Здоровеево"</strong> - Нативное приложение с оптимизацией размера до 2.4 МБ
+                                                </div>
+                                                <div class="project-item">
+                                                    <strong>Statsly</strong> - Laravel сервис аналитики (statsly.ru)
+                                                </div>
+                                                <div class="project-item">
+                                                    <strong>UWP виджеты</strong> - Виджеты для Xbox GameBar в Microsoft Store
+                                                </div>
+                                            </div>
+
+                                            <div class="section">
+                                                <h2>Образование</h2>
+                                                <p><strong>Владимирский политехнический колледж</strong><br>
+                                                Программирование в компьютерных системах (2020)</p>
+                                            </div>
+
+                                            <div class="section">
+                                                <h2>Дополнительно</h2>
+                                                <ul>
+                                                    <li>Быстрое обучение и адаптация к новым задачам</li>
+                                                    <li>Опыт работы с legacy кодом</li>
+                                                    <li>Умение находить нестандартные решения</li>
+                                                    <li>Внимание к деталям и качеству кода</li>
+                                                </ul>
+                                            </div>
+                                        </body>
+                                        </html>
+                                    `;
+                                    
+                                    // Создаем PDF с помощью jsPDF и html2canvas
+                                    if (typeof window.jsPDF !== 'undefined' && typeof html2canvas !== 'undefined') {
+                                        // Если библиотеки загружены, создаем PDF
+                                        const element = document.createElement('div');
+                                        element.innerHTML = htmlContent;
+                                        element.style.position = 'absolute';
+                                        element.style.left = '-9999px';
+                                        element.style.width = '800px';
+                                        element.style.backgroundColor = 'white';
+                                        document.body.appendChild(element);
+                                        
+                                        html2canvas(element, {
+                                            scale: 2,
+                                            useCORS: true,
+                                            allowTaint: true,
+                                            backgroundColor: '#ffffff'
+                                        }).then(canvas => {
+                                            const imgData = canvas.toDataURL('image/png');
+                                            const pdf = new window.jsPDF('p', 'mm', 'a4');
+                                            const imgWidth = 210;
+                                            const pageHeight = 295;
+                                            const imgHeight = canvas.height * imgWidth / canvas.width;
+                                            let heightLeft = imgHeight;
+                                            let position = 0;
+                                            
+                                            pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                                            heightLeft -= pageHeight;
+                                            
+                                            while (heightLeft >= 0) {
+                                                position = heightLeft - imgHeight;
+                                                pdf.addPage();
+                                                pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                                                heightLeft -= pageHeight;
+                                            }
+                                            
+                                            pdf.save('MaKrotos_Resume.pdf');
+                                            document.body.removeChild(element);
+                                        }).catch(error => {
+                                            console.error('Ошибка создания PDF:', error);
+                                            // Fallback to HTML download
+                                            const blob = new Blob([htmlContent], { type: 'text/html' });
+                                            const url = window.URL.createObjectURL(blob);
+                                            const a = document.createElement('a');
+                                            a.href = url;
+                                            a.download = 'MaKrotos_Resume.html';
+                                            document.body.appendChild(a);
+                                            a.click();
+                                            document.body.removeChild(a);
+                                            window.URL.revokeObjectURL(url);
+                                            alert('Ошибка создания PDF. Скачана HTML версия.');
+                                        });
+                                    } else {
+                                        // Если библиотеки не загружены, предлагаем скачать HTML версию
+                                        const blob = new Blob([htmlContent], { type: 'text/html' });
+                                        const url = window.URL.createObjectURL(blob);
+                                        const a = document.createElement('a');
+                                        a.href = url;
+                                        a.download = 'MaKrotos_Resume.html';
+                                        document.body.appendChild(a);
+                                        a.click();
+                                        document.body.removeChild(a);
+                                        window.URL.revokeObjectURL(url);
+                                        
+                                        alert('Скачана HTML версия резюме. Для создания PDF установите библиотеки jsPDF и html2canvas.');
+                                    }
+                                }
+
+                                // Global function for scrolling to sections
+                                let isScrolling = false;
+                                
+                                function scrollToSection(sectionId) {
+                                    if (isScrolling) {
+                                        return;
+                                    }
+                                    
+                                    isScrolling = true;
+                                    
+                                    const container = document.querySelector('.content');
+                                    const element = document.getElementById(sectionId);
+                                    
+                                    if (!container || !element) {
+                                        isScrolling = false;
+                                        return;
+                                    }
+                                    
+                                    // Получаем позицию элемента относительно контейнера
+                                    const containerRect = container.getBoundingClientRect();
+                                    const elementRect = element.getBoundingClientRect();
+                                    const currentScrollTop = container.scrollTop;
+                                    
+                                    // Вычисляем новую позицию скролла с отступом 100px
+                                    const targetScrollTop = currentScrollTop + elementRect.top - containerRect.top - 100;
+                                    
+                                    // Плавный скролл к позиции
+                                    container.scrollTo({
+                                        top: targetScrollTop,
+                                        behavior: 'smooth'
+                                    });
+                                    
+                                    // Update breadcrumbs
+                                    updateBreadcrumbs(sectionId);
+                                    
+                                    // Разрешаем новый скролл через 1 секунду
+                                    setTimeout(() => {
+                                        isScrolling = false;
+                                    }, 1000);
+                                }
+                                
 
 
-            element.dispatchEvent(event);
+                                // Global function for updating breadcrumbs
+                                function updateBreadcrumbs(sectionId) {
+                                    const breadcrumbs = document.getElementById('breadcrumbs');
+                                    if (!breadcrumbs) {
+                                        return;
+                                    }
+                                    
+                                    const sectionNames = {
+                                        'about': 'Обо мне',
+                                        'skills': 'Навыки',
+                                        'want_to_study': 'Хочу освоить',
+                                        'experience': 'Опыт работы',
+                                        'vkm': 'VK Music M',
+                                        'tg': 'Telegram API',
+                                        'android': 'Android Development',
+                                        'Laravel': 'Laravel Development',
+                                        'uwp': 'UWP / Microsoft Store',
+                                        'education': 'Образование',
+                                        'fox-traits': 'Мои черты'
+                                    };
 
-
-        }
+                                    const sectionName = sectionNames[sectionId] || 'Главная';
+                                    
+                                    breadcrumbs.innerHTML = `
+                                        <div class="breadcrumb-item">
+                                            <span>🏠</span>
+                                            <span onclick="scrollToSection('about')" style="cursor: pointer;">Главная</span>
+                                        </div>
+                                        <div class="breadcrumb-separator">/</div>
+                                        <div class="breadcrumb-item active">
+                                            <span>📄</span>
+                                            <span>${sectionName}</span>
+                                        </div>
+                                    `;
+                                }
 
 
 
@@ -979,6 +1604,34 @@
             popupImage.src = event.target.src;
             window.location = "#popup";
         }
+                                </script>
+                                
+                                <!-- Initialize jsPDF -->
+                                <script>
+                                    // Wait for libraries to load
+                                    window.addEventListener('load', function() {
+                                                                                // Check if jsPDF is available
+                                        if (typeof window.jsPDF !== 'undefined') {
+                                            window.jsPDF = window.jsPDF.jsPDF;
+                                        }
+                                        
+                                        // Force scrollbar to show
+                                        setTimeout(() => {
+                                            const container = document.querySelector('.content');
+                                            if (container) {
+                                                // Принудительно показываем полоску скролла
+                                                container.style.overflowY = 'scroll';
+                                                container.style.paddingRight = '50px';
+                                                
+                                                // Добавляем небольшой контент вниз, чтобы гарантировать скролл
+                                                const spacer = document.createElement('div');
+                                                spacer.style.height = '200px';
+                                                spacer.style.width = '1px';
+                                                container.appendChild(spacer);
+                                            }
+                                        }, 500);
+                                        
+                                    });
                                 </script>
                             </body>
                         </html>
