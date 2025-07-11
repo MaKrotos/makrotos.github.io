@@ -1595,43 +1595,54 @@
 
                                 // Global function for scrolling to sections
                                 let isScrolling = false;
-                                
+                                let scrollAnimationFrame = null;
+                                let scrollCancelToken = { cancelled: false };
+
                                 function scrollToSection(sectionId) {
-                                    if (isScrolling) {
-                                        return;
+                                    // Отменяем предыдущий скролл
+                                    if (scrollAnimationFrame) {
+                                        scrollCancelToken.cancelled = true;
+                                        cancelAnimationFrame(scrollAnimationFrame);
+                                        scrollAnimationFrame = null;
                                     }
-                                    
-                                    isScrolling = true;
-                                    
+                                    scrollCancelToken = { cancelled: false };
+
                                     const container = document.querySelector('.content');
                                     const element = document.getElementById(sectionId);
-                                    
                                     if (!container || !element) {
-                                        isScrolling = false;
                                         return;
                                     }
-                                    
-                                    // Получаем позицию элемента относительно контейнера
+
                                     const containerRect = container.getBoundingClientRect();
                                     const elementRect = element.getBoundingClientRect();
                                     const currentScrollTop = container.scrollTop;
-                                    
-                                    // Вычисляем новую позицию скролла с отступом 100px
                                     const targetScrollTop = currentScrollTop + elementRect.top - containerRect.top - 100;
-                                    
-                                    // Плавный скролл к позиции
-                                    container.scrollTo({
-                                        top: targetScrollTop,
-                                        behavior: 'smooth'
-                                    });
-                                    
+
+                                    const duration = 600; // ms
+                                    const startTime = performance.now();
+                                    const startScroll = currentScrollTop;
+                                    const distance = targetScrollTop - startScroll;
+
+                                    function easeInOutQuad(t) {
+                                        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+                                    }
+
+                                    function animateScroll(now) {
+                                        if (scrollCancelToken.cancelled) return;
+                                        const elapsed = now - startTime;
+                                        const progress = Math.min(elapsed / duration, 1);
+                                        const eased = easeInOutQuad(progress);
+                                        container.scrollTop = startScroll + distance * eased;
+                                        if (progress < 1) {
+                                            scrollAnimationFrame = requestAnimationFrame(animateScroll);
+                                        } else {
+                                            scrollAnimationFrame = null;
+                                        }
+                                    }
+                                    scrollAnimationFrame = requestAnimationFrame(animateScroll);
+
                                     // Update breadcrumbs
                                     updateBreadcrumbs(sectionId);
-                                    
-                                    // Разрешаем новый скролл через 1 секунду
-                                    setTimeout(() => {
-                                        isScrolling = false;
-                                    }, 1000);
                                 }
                                 
 
