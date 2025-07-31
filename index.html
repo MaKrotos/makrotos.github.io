@@ -96,9 +96,7 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <meta name="apple-mobile-web-app-title" content="MaKrotos">
-        <!-- PDF Libraries -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
         <!-- Structured Data -->
         <script type="application/ld+json">
         {
@@ -450,7 +448,7 @@
                                                 style="margin-top: 10px;"
                                             >
                                                 <span>📄</span>
-                                                Скачать резюме (PDF)
+                                                Скачать резюме (HTML)
                                             </a>
                                         </div>
                                         <div id="skills" class="section slide-in-left">
@@ -1217,7 +1215,7 @@
 
                                 // Download resume function
                                 function downloadResume() {
-                                    // Создаем HTML для PDF
+                                    // Создаем HTML для резюме
                                     const htmlContent = `
                                         <!DOCTYPE html>
                                         <html>
@@ -1465,71 +1463,16 @@
                                         </html>
                                     `;
                                     
-                                    // Создаем PDF с помощью jsPDF и html2canvas
-                                    if (typeof window.jsPDF !== 'undefined' && typeof html2canvas !== 'undefined') {
-                                        // Если библиотеки загружены, создаем PDF
-                                        const element = document.createElement('div');
-                                        element.innerHTML = htmlContent;
-                                        element.style.position = 'absolute';
-                                        element.style.left = '-9999px';
-                                        element.style.width = '800px';
-                                        element.style.backgroundColor = 'white';
-                                        document.body.appendChild(element);
-                                        
-                                        html2canvas(element, {
-                                            scale: 2,
-                                            useCORS: true,
-                                            allowTaint: true,
-                                            backgroundColor: '#ffffff'
-                                        }).then(canvas => {
-                                            const imgData = canvas.toDataURL('image/png');
-                                            const pdf = new window.jsPDF('p', 'mm', 'a4');
-                                            const imgWidth = 210;
-                                            const pageHeight = 295;
-                                            const imgHeight = canvas.height * imgWidth / canvas.width;
-                                            let heightLeft = imgHeight;
-                                            let position = 0;
-                                            
-                                            pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-                                            heightLeft -= pageHeight;
-                                            
-                                            while (heightLeft >= 0) {
-                                                position = heightLeft - imgHeight;
-                                                pdf.addPage();
-                                                pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-                                                heightLeft -= pageHeight;
-                                            }
-                                            
-                                            pdf.save('MaKrotos_Resume.pdf');
-                                            document.body.removeChild(element);
-                                        }).catch(error => {
-                                            console.error('Ошибка создания PDF:', error);
-                                            // Fallback to HTML download
-                                            const blob = new Blob([htmlContent], { type: 'text/html' });
-                                            const url = window.URL.createObjectURL(blob);
-                                            const a = document.createElement('a');
-                                            a.href = url;
-                                            a.download = 'MaKrotos_Resume.html';
-                                            document.body.appendChild(a);
-                                            a.click();
-                                            document.body.removeChild(a);
-                                            window.URL.revokeObjectURL(url);
-                                            alert('Ошибка создания PDF. Скачана HTML версия.');
-                                        });
-                                    } else {
-                                        // Если библиотеки не загружены, предлагаем скачать HTML версию
-                                        const blob = new Blob([htmlContent], { type: 'text/html' });
-                                        const url = window.URL.createObjectURL(blob);
-                                        const a = document.createElement('a');
-                                        a.href = url;
-                                        a.download = 'MaKrotos_Resume.html';
-                                        document.body.appendChild(a);
-                                        a.click();
-                                        document.body.removeChild(a);
-                                        window.URL.revokeObjectURL(url);
-                                        
-                                        alert('Скачана HTML версия резюме. Для создания PDF установите библиотеки jsPDF и html2canvas.');
-                                    }
+                                    // Скачиваем HTML файл
+                                    const blob = new Blob([htmlContent], { type: 'text/html' });
+                                    const url = window.URL.createObjectURL(blob);
+                                    const a = document.createElement('a');
+                                    a.href = url;
+                                    a.download = 'MaKrotos_Resume.html';
+                                    document.body.appendChild(a);
+                                    a.click();
+                                    document.body.removeChild(a);
+                                    window.URL.revokeObjectURL(url);
                                 }
 
                                 // Global function for scrolling to sections
@@ -1646,15 +1589,9 @@
             window.location = "#popup";
         }
                                 </script>
-                                <!-- Initialize jsPDF -->
                                 <script>
-                                    // Wait for libraries to load
+                                    // Wait for page to load
                                     window.addEventListener('load', function() {
-                                                                                // Check if jsPDF is available
-                                        if (typeof window.jsPDF !== 'undefined') {
-                                            window.jsPDF = window.jsPDF.jsPDF;
-                                        }
-                                        
                                         // Force scrollbar to show
                                         setTimeout(() => {
                                             const container = document.querySelector('.content');
